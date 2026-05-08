@@ -1,0 +1,103 @@
+---
+const { notes, buildNote } = Astro.props;
+
+const hasNotes =
+  notes.weapons.length + notes.artifacts.length + notes.talents.length > 0;
+
+const noteItems = [
+  { key: 'artifact', label: 'artifacts' },
+  { key: 'weapons', label: 'weapons' },
+  { key: 'talent', label: 'talents' },
+];
+---
+
+{
+  (hasNotes || buildNote?.notes?.length > 0) && (
+    <div class="card">
+      <h2>Notes</h2>
+
+      {buildNote && (
+        <div>
+          {noteItems.map(
+            (item) =>
+              buildNote[item.key] && (
+                <div>
+                  <a href={buildNote[item.key].link} target="_blank">
+                    Detailed {item.label} calculation
+                  </a>{' '}
+                  - Thank you to {buildNote[item.key].author}!
+                </div>
+              ),
+          )}
+
+          {buildNote.notes?.length > 0 && (
+            <div>
+              {buildNote.notes.map((n: string) => (
+                <p set:html={n} />
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
+      {notes.weapons.length > 0 && (
+        <div>
+          <h3>Regarding Weapons Choices:</h3>
+
+          {notes.weapons.map((n: { name: string; note: string }) => (
+            <div set:html={`<strong>${n.name}:</strong> ${n.note}`} />
+          ))}
+        </div>
+      )}
+
+      {(notes.artifacts.sets.length > 0 ||
+        notes.artifacts.mainstats.length > 0 ||
+        notes.artifacts.substats.length > 0) && (
+        <div>
+          <h3>Regarding Artifacts Choices:</h3>
+
+          {notes.artifacts.sets.length > 0 && (
+            <div>
+              <h4>Sets</h4>
+              {notes.artifacts.sets.map((n: { name: string; note: string }) => (
+                <div set:html={`<strong>${n.name}:</strong> ${n.note}`} />
+              ))}
+            </div>
+          )}
+
+          {notes.artifacts.mainstats.length > 0 && (
+            <div>
+              <h4>Main Stats</h4>
+              {notes.artifacts.mainstats.map(
+                (n: { name: string; note: string }) => (
+                  <div set:html={`<strong>${n.name}:</strong> ${n.note}`} />
+                ),
+              )}
+            </div>
+          )}
+
+          {notes.artifacts.substats.length > 0 && (
+            <div>
+              <h4>Substats</h4>
+              {notes.artifacts.substats.map(
+                (n: { name: string; note: string }) => (
+                  <div set:html={`<strong>${n.name}:</strong> ${n.note}`} />
+                ),
+              )}
+            </div>
+          )}
+        </div>
+      )}
+
+      {notes.talents.length > 0 && (
+        <div>
+          <h3>Regarding Talents Choices:</h3>
+
+          {notes.talents.map((n: { name: string; note: string }) => (
+            <div set:html={`<strong>${n.name}:</strong> ${n.note}`} />
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}

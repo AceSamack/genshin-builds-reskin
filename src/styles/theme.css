@@ -1,0 +1,53 @@
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+body[data-element="pyro"] {
+  --bg: #3D1818;
+  --text: hsla(0,0%,100%,.85);
+  --accent: rgb(255, 215, 128);
+  --element: #FF6640;
+}
+
+body[data-element="hydro"] {
+  --bg: #15315c;
+  --text: hsla(0,0%,100%,.85);
+  --accent: rgb(255, 215, 128);
+  --element: #02C0FF;
+}
+
+body[data-element="electro"] {
+  --bg: #2a1a67;
+  --text: hsla(0,0%,100%,.85);
+  --accent: rgb(255, 215, 128);
+  --element: #C87FFF;
+}
+
+body[data-element="dendro"] {
+  --bg: #183d12;
+  --text: hsla(0,0%,100%,.85);
+  --accent: rgb(255, 215, 128); 
+  --element: #9DE43B;
+}
+
+body[data-element="geo"] {
+  --bg: #3d3015;
+  --text: hsla(0,0%,100%,.85);
+  --accent: rgb(255, 215, 128);
+  --element: #FDB00F;
+}
+
+body[data-element="anemo"] {
+  --bg: #153434;
+  --text: hsla(0,0%,100%,.85);
+  --accent: rgb(255, 215, 128);
+  --element: #30D8A0;
+}
+
+body[data-element="cryo"] {
+  --bg: #072C4A
+  --text: hsla(0,0%,100%,.85);
+  --accent: rgb(255, 215, 128);
+  --element: #7AF0F0;
+}

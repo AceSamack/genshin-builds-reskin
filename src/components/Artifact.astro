@@ -1,0 +1,109 @@
+---
+const { artifacts } = Astro.props;
+---
+
+<div class="card">
+  <h2>Artifacts</h2>
+
+  {/* SETS */}
+  <div class="section">
+    <h3>Sets</h3>
+
+    {
+      artifacts.sets.artifact_sets.map(
+        (
+          set: {
+            items: { name: string; pieces: number; note: string }[];
+            choose: boolean;
+          },
+          i: number,
+        ) => (
+          <div style="margin-bottom: 10px;">
+            <div>
+              <strong>{i + 1}.</strong>{' '}
+              {set.items[0] && (
+                <span>
+                  {set.items[0].name}{' '}
+                  <span class="bold">
+                    ({set.items[0].pieces}) {set.items[0].note ? '*' : ''}
+                  </span>
+                </span>
+              )}
+            </div>
+
+            {set.items
+              .slice(1)
+              .map((item: { name: string; pieces: number; note: string }) => (
+                <div class="alt">
+                  {set.choose ? '' : '≈ '}
+                  {item.name}{' '}
+                  <span class="bold">
+                    ({item.pieces}) {item.note ? '*' : ''}
+                  </span>
+                </div>
+              ))}
+
+            <span class="bold">{set.choose ? `[Choose Two]` : ''}</span>
+          </div>
+        ),
+      )
+    }
+  </div>
+
+  {/* MAIN STATS */}
+  <div class="section">
+    <h3>Main Stats</h3>
+
+    <div>
+      <strong>Sands:</strong>
+      {
+        artifacts.mainstats.main_stats.sands
+          .map(
+            (stat: { name: string; note: string }) =>
+              `${stat.name} ${stat.note ? '*' : ''}`,
+          )
+          .join(' / ')
+      }
+    </div>
+
+    <div>
+      <strong>Goblet:</strong>
+      {
+        artifacts.mainstats.main_stats.goblet
+          .map(
+            (stat: { name: string; note: string }) =>
+              `${stat.name} ${stat.note ? '*' : ''}`,
+          )
+          .join(' / ')
+      }
+    </div>
+
+    <div>
+      <strong>Circlet:</strong>
+      {
+        artifacts.mainstats.main_stats.circlet
+          .map(
+            (stat: { name: string; note: string }) =>
+              `${stat.name} ${stat.note ? '*' : ''}`,
+          )
+          .join(' / ')
+      }
+    </div>
+  </div>
+
+  {/* SUBSTATS */}
+  <div class="section">
+    <h3>Substats</h3>
+
+    {
+      artifacts.substats.substats_priority.map(
+        (s: string | { name: string; note?: string }, i: number) => (
+          <div>
+            <strong>{i + 1}.</strong> {typeof s === 'string' ? s : s.name}{' '}
+            {typeof s !== 'string' && s.note ? '*' : ''}
+          </div>
+        ),
+      )
+    }
+  </div>
+</div>

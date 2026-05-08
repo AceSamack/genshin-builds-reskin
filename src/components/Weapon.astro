@@ -1,0 +1,40 @@
+---
+const { weapons } = Astro.props;
+---
+
+<div class="card">
+  <h2>Weapons</h2>
+
+  {
+    weapons.weapons.map((position: { items: any[] }, i: number) => (
+      <div style="margin-bottom: 10px;">
+        <div>
+          <strong>{i + 1}.</strong>{' '}
+          {position.items[0] && (
+            <span>
+              {position.items[0].name}{' '}
+              <span class="bold">
+                ({position.items[0].rarity}✩)
+                {position.items[0].refinement
+                  ? ` [R${position.items[0].refinement}]`
+                  : ''}
+                {position.items[0].note ? '*' : ''}
+              </span>
+            </span>
+          )}
+        </div>
+
+        {position.items.slice(1).map((w) => (
+          <div class="alt">
+            ≈ {w.name}{' '}
+            <span class="bold">
+              ({w.rarity}✩)
+              {w.refinement ? ` [R${w.refinement}]` : ''}
+              {w.note ? '*' : ''}
+            </span>
+          </div>
+        ))}
+      </div>
+    ))
+  }
+</div>

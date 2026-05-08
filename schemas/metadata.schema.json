@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/metadata.schema.json",
+  "title": "Character Metadata",
+  "type": "object",
+  "required": ["weapon", "last_updated", "image"],
+  "properties": {
+    "weapon": { "type": "string" },
+    "last_updated": { "type": "string" },
+    "image": { "type": "string", "format": "uri" }
+  },
+  "additionalProperties": false
+}

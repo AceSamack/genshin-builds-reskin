@@ -1,0 +1,10 @@
+{
+  "main_stats": {
+    "sands": [
+        {"name": "ATK%", "note": "Best for Melt DPS"},
+        {"name":"Elemental Mastery"}
+    ],
+    "goblet": [{"name": "Pyro DMG"}],
+    "circlet": [{"name": "Crit DMG"}]
+  }
+}

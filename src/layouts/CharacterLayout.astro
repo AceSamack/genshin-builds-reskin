@@ -1,0 +1,34 @@
+---
+import '../styles/base.css';
+import '../styles/build.css';
+import '../styles/theme.css';
+
+const { character, metadata } = Astro.props;
+---
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body data-element={Astro.props.element}>
+    <div class="page">
+      <!-- CHARACTER HEADER CARD -->
+      <div class="character-header">
+        <img class="character-image" src={metadata?.image} />
+
+        <h1 class="page-title">{character}</h1>
+
+        {
+          metadata?.last_updated && (
+            <div class="last-updated">
+              Last Updated: Version {metadata.last_updated}
+            </div>
+          )
+        }
+      </div>
+
+      <slot />
+    </div>
+  </body>
+</html>

@@ -1,7 +1,6 @@
 {
   "weapons": [
     {
-      "rank": 1,
       "items": [
         {
           "name": "The First Great Magic",
@@ -10,7 +9,6 @@
       ]
     },
     {
-      "rank": 2,
       "items": [
         {
           "name": "Aqua Simulacra",
@@ -19,7 +17,6 @@
       ]
     },
     {
-      "rank": 3,
       "items": [
         {
           "name": "Thundering Pulse",
@@ -36,7 +33,6 @@
       ]
     },
     {
-      "rank": 4,
       "items": [
         {
           "name": "Slingshot",
@@ -45,12 +41,11 @@
       ]
     },
     {
-      "rank": 5,
       "items": [
         {
           "name": "Amos' Bow",
           "rarity": 5,
-          "note": "conditional"
+          "note": "Ranking assumes you stay close to the enemy but this weapons has the potential to outclasses **Aqua Simulacra** with max stacks but maintaining stacks would be difficult."
         },
         {
           "name": "Hunter's Path",
@@ -59,7 +54,6 @@
       ]
     },
     {
-      "rank": 6,
       "items": [
         {
           "name": "Ibis Piercer",
@@ -73,7 +67,6 @@
       ]
     },
     {
-      "rank": 7,
       "items": [
         {
           "name": "Hamayumi",
@@ -86,7 +79,6 @@
       ]
     },
     {
-      "rank": 8,
       "items": [
         {
           "name": "Song of Stillness",
@@ -95,7 +87,6 @@
       ]
     },
     {
-      "rank": 9,
       "items": [
         {
           "name": "Windblume Ode",
@@ -108,12 +99,11 @@
       ]
     },
     {
-      "rank": 10,
       "items": [
         {
           "name": "Sharpshooter's Oath",
           "rarity": 3,
-          "note": "conditional"
+          "note": "Significantly more potent if used in a headshot heavy Charged Attack playstyle."
         },
         {
           "name": "King's Squire",

@@ -14,5 +14,10 @@
   "dependencies": {
     "astro": "^6.3.1",
     "marked": "^18.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.2",
+    "prettier": "^3.8.3",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }

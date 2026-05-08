@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/weapons.schema.json",
+  "title": "Weapons Build",
+  "type": "object",
+  "required": ["weapons"],
+  "properties": {
+    "weapons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["items"],
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["name", "rarity"],
+              "properties": {
+                "name": { "type": "string" },
+                "rarity": { "type": "number" },
+                "refinement": { "type": "number" },
+                "note": { "type": "string" }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
