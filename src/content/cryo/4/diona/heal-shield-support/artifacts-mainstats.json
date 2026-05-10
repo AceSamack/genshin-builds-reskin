@@ -1,0 +1,25 @@
+{
+    "main_stats": {
+        "sands": [
+            {
+                "name": "er"
+            },
+            {
+                "name": "hp%"
+            }
+        ],
+        "goblet": [
+            {
+                "name": "hp%"
+            }
+        ],
+        "circlet": [
+            {
+                "name": "hp%"
+            },
+            {
+                "name": "healing-bonus"
+            }
+        ]
+    }
+}

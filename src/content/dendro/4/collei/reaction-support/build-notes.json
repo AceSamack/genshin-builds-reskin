@@ -1,0 +1,29 @@
+{
+    "name": {
+        "en": "Reaction Support",
+        "fr": "Support Réactions"
+    },
+    "best": true,
+    "notes": [
+        {
+            "en": "[[character:collei]] is a Bow User who provides off-field [[element:dendro]] application and some damage.",
+            "fr": "[[character:collei]] est une archère qui fournit de l'application [[element:dendro]] off-field et des dégâts."
+        },
+        {
+            "en": "**Typical [[character:collei]] Rotation:**:",
+            "fr": "**Rotation typique de [[character:collei]]:**:"
+        },
+        {
+            "en": "Skill > Burst > Swap",
+            "fr": "Skill > Ult > Swap"
+        },
+        {
+            "en": "**Rotation with [[weapon:polar-star]]:**",
+            "fr": "**Rotation avec [[weapon:polar-star]]:**"
+        },
+        {
+            "en": "N1 > tap Charged Attack > Skill > Burst > Swap",
+            "fr": "N1 > tap Attaque chargée > Skill > Ult > Swap"
+        }
+    ]
+}

@@ -1,22 +1,43 @@
 ---
 import { t } from '../utils/i18n';
 const { talents, locale } = Astro.props;
+
+type TalentItem = {
+  name: string;
+  note?: string;
+  noteId?: string;
+};
+
+type TalentPriority = {
+  items: TalentItem[];
+};
+
 ---
 
 <div class="card">
   <h2>{t(locale, 'ui', 'Talents')}</h2>
 
   {
-    talents.talents.map((talent: { items: any[] }, i: number) => (
+    talents.talents.map((talent: TalentPriority, i: number) => (
       <div style="margin-bottom: 10px;">
         <div>
           <strong>{i + 1}.</strong>{' '}
-          {talent.items[0] && <span>{talent.items[0].name}</span>}
+          <span>
+            {talent.items.map((item, itemIndex) => (
+              <>
+                {itemIndex > 0 && ' = '}
+                {item.name}
+                {item.noteId ? (
+                  <a class="note-link" href={`#${item.noteId}`}>
+                    *
+                  </a>
+                ) : (
+                  item.note ? '*' : ''
+                )}
+              </>
+            ))}
+          </span>
         </div>
-
-        {talent.items.slice(1).map((t) => (
-          <div class="alt">≈ {t.name}</div>
-        ))}
       </div>
     ))
   }

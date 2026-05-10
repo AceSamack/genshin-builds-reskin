@@ -1,0 +1,93 @@
+{
+  "artifact_sets": [
+    {
+      "groups": [
+        {
+          "items": [
+            {
+              "name": "emblem-of-severed-fate",
+              "pieces": 4,
+              "note": "This set falls off in terms of damage if [[character:xingqiu]] has less than 130% [[stat:er]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "groups": [
+        {
+          "items": [
+            {
+              "name": "noblesse-oblige",
+              "pieces": 4,
+              "note": "Offers party-wide [[stat:atk]] boost, you can use this set on [[character:xingqiu]] **if nobody else on the party is able to use it better**. If someone else on the team **already has [[artifact:noblesse-oblige]] (4), [[artifact:noblesse-oblige]] (4) should not be used**."
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "name": "scroll-of-the-hero-of-cinder-city",
+              "pieces": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "groups": [
+        {
+          "items": [
+            {
+              "name": "nymphs-dream",
+              "pieces": 4
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "name": "a-day-carved-from-rising-winds",
+              "pieces": 4
+            }
+          ]
+        },
+        {
+          "choose": true,
+          "items": [
+            {
+              "name": "noblesse-oblige",
+              "pieces": 2
+            },
+            {
+              "name": "hydro-set",
+              "pieces": 2
+            },
+            {
+              "name": "atk-set",
+              "pieces": 2
+            },
+            {
+              "name": "emblem-of-severed-fate",
+              "pieces": 2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "conditional": [
+    {
+      "items": [
+        {
+          "name": "blizzard-strayer",
+          "pieces": 4,
+          "note": {
+            "en": "Outperforms **[[artifact:emblem-of-severed-fate]]** on **[[element:freeze]] Teams**. However, it is generally **not recommended** to farm specifically for this set.",
+            "fr": "Meilleur que **[[artifact:emblem-of-severed-fate]]** dans les equipes **[[element:freeze]]**. Cependant, il n'est generalement **pas recommande** de farmer specifiquement pour ce set."
+          }
+        }
+      ]
+    }
+  ]
+}

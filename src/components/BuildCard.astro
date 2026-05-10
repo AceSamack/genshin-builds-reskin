@@ -1,11 +1,12 @@
 ---
-const { title, id } = Astro.props;
+const { title, id, badge } = Astro.props;
 ---
 
 <div class="build-card" data-id={id}>
   <button class="build-header">
-    <span class="arrow">▸</span>
-    {title}
+    <span class="arrow">&rsaquo;</span>
+    <span class="build-title">{title}</span>
+    {badge && <span class="build-badge">{badge}</span>}
   </button>
 
   <div class="build-content">

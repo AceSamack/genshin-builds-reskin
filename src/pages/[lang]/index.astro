@@ -1,0 +1,64 @@
+---
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HomeFilters from '../../components/HomeFilters.astro';
+import { Image } from 'astro:assets';
+import '../../styles/base.css';
+import '../../styles/build.css';
+import '../../styles/home.css';
+import '../../styles/theme.css';
+import { getHomePageData } from '../../utils/home-page';
+
+const requestedLang = Array.isArray(Astro.params.lang)
+  ? Astro.params.lang[0]
+  : Astro.params.lang;
+const { characters, lang, locale } = getHomePageData(requestedLang ?? 'en');
+---
+
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Genshin Builds</title>
+  </head>
+  <body data-element="anemo">
+    <Header locale={locale} lang={lang} />
+    <main class="home-page">
+      <h1>Genshin Builds</h1>
+      <HomeFilters locale={locale} />
+
+      <div class="character-grid">
+        {
+          characters.map((character, index) => (
+            <a
+              class={`character-card ${character.element}`}
+              href={`/${lang}/${character.slug}`}
+              aria-label={`Open ${character.name} builds`}
+              data-character-card
+              data-element={character.element}
+              data-name={character.name}
+              data-rarity={character.rarity}
+              data-weapon={character.weapon}
+            >
+              <Image
+                src={character.portrait}
+                alt={`${character.name} portrait`}
+                loading={index < 12 ? 'eager' : 'lazy'}
+                width="72"
+                height="72"
+              />
+              <span>{character.name}</span>
+            </a>
+          ))
+        }
+      </div>
+    </main>
+    <Footer lang={lang} />
+    <script>
+      import '../../scripts/character-filters';
+    </script>
+  </body>
+</html>

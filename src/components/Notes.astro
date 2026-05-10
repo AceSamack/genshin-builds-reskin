@@ -2,8 +2,17 @@
 import { t } from '../utils/i18n';
 const { notes, buildNote, locale } = Astro.props;
 
-const hasNotes =
-  notes.weapons.length + notes.artifacts.length + notes.talents.length > 0;
+const hasWeaponsNotes =
+  notes.weapons.global.length + notes.weapons.items.length > 0;
+const hasArtifactNotes =
+  notes.artifacts.global.length +
+    notes.artifacts.sets.length +
+    notes.artifacts.mainstats.length +
+    notes.artifacts.substats.length >
+  0;
+const hasTalentNotes =
+  notes.talents.global.length + notes.talents.items.length > 0;
+const hasNotes = hasWeaponsNotes || hasArtifactNotes || hasTalentNotes;
 
 const noteItems = [
   {
@@ -20,6 +29,11 @@ const noteItems = [
     key: 'talent',
     label: t(locale, 'ui', 'Talents'),
     linkText: t(locale, 'ui', 'Detailed talents calculation'),
+  },
+  {
+    key: 'global',
+    label: t(locale, 'ui', 'General'),
+    linkText: t(locale, 'ui', 'Detailed calculations'),
   },
 ];
 ---
@@ -46,36 +60,54 @@ const noteItems = [
 
           {buildNote.notes?.length > 0 && (
             <div>
-              {buildNote.notes.map((n: string) => (
-                <p set:html={n} />
+              {buildNote.notes.map((note: string) => (
+                <p set:html={note} />
               ))}
             </div>
           )}
         </div>
       )}
 
-      {notes.weapons.length > 0 && (
+      {hasWeaponsNotes && (
         <div>
           <h3>{t(locale, 'ui', 'Regarding Weapons Choices:')}</h3>
 
-          {notes.weapons.map((n: { name: string; note: string }) => (
-            <div set:html={`<strong>${n.name}:</strong> ${n.note}`} />
+          {notes.weapons.global.map((note: string) => (
+            <p set:html={note} />
           ))}
+
+          {notes.weapons.items.map(
+            (note: { id: string; name: string; note: string }) => (
+            <div
+              id={note.id}
+              class="note-target"
+              set:html={`<span class="element-bold">${note.name}:</span> ${note.note}`}
+            />
+            ),
+          )}
         </div>
       )}
 
-      {(notes.artifacts.sets.length > 0 ||
-        notes.artifacts.mainstats.length > 0 ||
-        notes.artifacts.substats.length > 0) && (
+      {hasArtifactNotes && (
         <div>
           <h3>{t(locale, 'ui', 'Regarding Artifacts Choices:')}</h3>
+
+          {notes.artifacts.global.map((note: string) => (
+            <p set:html={note} />
+          ))}
 
           {notes.artifacts.sets.length > 0 && (
             <div>
               <h4>{t(locale, 'ui', 'Sets')}</h4>
-              {notes.artifacts.sets.map((n: { name: string; note: string }) => (
-                <div set:html={`<strong>${n.name}:</strong> ${n.note}`} />
-              ))}
+              {notes.artifacts.sets.map(
+                (note: { id: string; name: string; note: string }) => (
+                  <div
+                    id={note.id}
+                    class="note-target"
+                    set:html={`<span class="element-bold">${note.name}:</span> ${note.note}`}
+                  />
+                ),
+              )}
             </div>
           )}
 
@@ -83,8 +115,12 @@ const noteItems = [
             <div>
               <h4>{t(locale, 'ui', 'Main Stats')}</h4>
               {notes.artifacts.mainstats.map(
-                (n: { name: string; note: string }) => (
-                  <div set:html={`<strong>${n.name}:</strong> ${n.note}`} />
+                (note: { id: string; name: string; note: string }) => (
+                  <div
+                    id={note.id}
+                    class="note-target"
+                    set:html={`<span class="element-bold">${note.name}:</span> ${note.note}`}
+                  />
                 ),
               )}
             </div>
@@ -94,8 +130,12 @@ const noteItems = [
             <div>
               <h4>{t(locale, 'ui', 'Substats')}</h4>
               {notes.artifacts.substats.map(
-                (n: { name: string; note: string }) => (
-                  <div set:html={`<strong>${n.name}:</strong> ${n.note}`} />
+                (note: { id: string; name: string; note: string }) => (
+                  <div
+                    id={note.id}
+                    class="note-target"
+                    set:html={`<span class="element-bold">${note.name}:</span> ${note.note}`}
+                  />
                 ),
               )}
             </div>
@@ -103,13 +143,23 @@ const noteItems = [
         </div>
       )}
 
-      {notes.talents.length > 0 && (
+      {hasTalentNotes && (
         <div>
           <h3>{t(locale, 'ui', 'Regarding Talents Choices:')}</h3>
 
-          {notes.talents.map((n: { name: string; note: string }) => (
-            <div set:html={`<strong>${n.name}:</strong> ${n.note}`} />
+          {notes.talents.global.map((note: string) => (
+            <p set:html={note} />
           ))}
+
+          {notes.talents.items.map(
+            (note: { id: string; name: string; note: string }) => (
+            <div
+              id={note.id}
+              class="note-target"
+              set:html={`<span class="element-bold">${note.name}:</span> ${note.note}`}
+            />
+            ),
+          )}
         </div>
       )}
     </div>

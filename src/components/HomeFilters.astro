@@ -1,0 +1,53 @@
+---
+import { t } from '../utils/i18n';
+
+const { locale } = Astro.props;
+
+const elements = ['anemo', 'cryo', 'dendro', 'electro', 'geo', 'hydro', 'pyro'];
+const rarities = ['4', '5'];
+const weapons = ['bow', 'catalyst', 'claymore', 'polearm', 'sword'];
+---
+
+<form class="home-filters" data-character-filters>
+  <label class="home-search">
+    {t(locale, 'ui', 'Search')}
+    <input
+      type="search"
+      name="search"
+      placeholder={t(locale, 'ui', 'Search by name')}
+      autocomplete="off"
+    />
+  </label>
+
+  <label>
+    {t(locale, 'ui', 'Element')}
+    <select name="element">
+      <option value="">{t(locale, 'ui', 'All')}</option>
+      {
+        elements.map((element) => (
+          <option value={element}>{t(locale, 'element', element)}</option>
+        ))
+      }
+    </select>
+  </label>
+
+  <label>
+    {t(locale, 'ui', 'Rarity')}
+    <select name="rarity">
+      <option value="">{t(locale, 'ui', 'All')}</option>
+      {rarities.map((rarity) => <option value={rarity}>{rarity}★</option>)}
+    </select>
+  </label>
+
+  <label>
+    {t(locale, 'ui', 'Weapon')}
+    <select name="weapon">
+      <option value="">{t(locale, 'ui', 'All')}</option>
+      {
+        weapons.map((weapon) => (
+          <option value={weapon}>{t(locale, 'ui', weapon)}</option>
+        ))
+      }
+    </select>
+  </label>
+</form>

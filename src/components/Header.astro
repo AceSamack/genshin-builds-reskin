@@ -2,7 +2,7 @@
 import '../styles/header.css';
 import { t } from '../utils/i18n';
 
-const { locale, lang, character } = Astro.props;
+const { locale, lang, character, page } = Astro.props;
 
 const languages = [
   { code: 'en', name: 'English' },
@@ -19,7 +19,11 @@ const currentLang = lang || 'en';
 <header class="site-header">
   <div class="header-content">
     <div class="logo">
-      <a href={`/${currentLang}/`} class="logo-link">
+      <a
+        href={`/${currentLang}/`}
+        class="logo-link"
+        aria-label="Genshin Builds home"
+      >
         <h1>Genshin Builds</h1>
       </a>
     </div>
@@ -31,6 +35,7 @@ const currentLang = lang || 'en';
         id="language-select"
         value={currentLang}
         data-character={character}
+        data-page={page}
       >
         {
           languages.map((lang) => (
@@ -49,7 +54,8 @@ const currentLang = lang || 'en';
   select?.addEventListener('change', (e) => {
     const lang = e.target.value;
     const char = select.dataset.character;
-    const path = `/${lang}/${char}`;
+    const page = select.dataset.page;
+    const path = char ? `/${lang}/${char}` : page ? `/${lang}/${page}` : `/${lang}`;
     window.location.href = path;
   });
 </script>

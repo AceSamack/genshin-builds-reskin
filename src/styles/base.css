@@ -7,6 +7,23 @@
   box-sizing: border-box;
 }
 
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main,
+.page {
+  flex: 1 0 auto;
+}
+
 .page {
   max-width: 1100px;
   margin: 0 auto;
@@ -16,7 +33,9 @@
 a {
   color: var(--accent);
   text-decoration: none;
-  transition: opacity 0.15s ease, text-decoration 0.15s ease;
+  transition:
+    opacity 0.15s ease,
+    text-decoration 0.15s ease;
 }
 
 a:hover {
@@ -28,108 +47,52 @@ a:hover {
   font-weight: 700;
 }
 
-body {
-      margin: 0;
-  padding: 0;
-  font-family: inherit;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* =========================
-   CHARACTER HEADER CARD
-   ========================= */
-
-.character-header {
-  text-align: center;
-  padding: 24px 16px;
-  margin-bottom: 20px;
-  border-radius: 12px;
+.card {
   position: relative;
-  overflow: hidden;
-}
-
-/* gradient aura background */
-.character-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-
-  background:
-    radial-gradient(
-      circle at center,
-      color-mix(in srgb, var(--element) 30%, transparent),
-      transparent 30%
-    )
-  }
-
-/* keep header content above gradient */
-.character-header > * {
-  position: relative;
-  z-index: 1;
-}
-
-/* =========================
-   BUILD UI
-   ========================= */
-
-details {
-  border: 1px solid #ddd;
-  border-radius: 6px;
   margin-bottom: 12px;
-  padding: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 14px;
+  background: rgba(0, 0, 0, 0.096);
+  backdrop-filter: blur(8px);
 }
 
-summary {
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-top: 10px;
-}
-
-/* stack on mobile */
-@media (max-width: 900px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.section {
-  padding: 8px;
-}
-
-.alt {
-  margin-left: 12px;
-}
-
-/* =========================
-   HEADER TEXT + IMAGE
-   ========================= */
-
-.page-title {
+.card h2 {
+  margin: 0 0 30px;
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.3px;
   text-align: center;
-  margin: 1rem 0 0.5rem;
 }
 
-.last-updated {
+.card h3 {
+  margin: 30px 0 15px;
+  color: var(--accent);
+  font-weight: 500;
+  opacity: 0.9;
   text-align: center;
-  margin-bottom: 1rem;
-  opacity: 0.8;
 }
 
-.character-image {
-  display: block;
-  margin: 0 auto 20px;
-  width: clamp(160px, 35vw, 360px);
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+.site-footer {
+  width: 100%;
+  max-width: 1100px;
+  flex-shrink: 0;
+  margin: 40px auto 0;
+  padding: 24px 16px 32px;
+  color: color-mix(in srgb, var(--text) 72%, transparent);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.site-footer p {
+  margin: 4px 0;
 }

@@ -1,8 +1,15 @@
 ---
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HomeFilters from '../components/HomeFilters.astro';
+import { Image } from 'astro:assets';
 import '../styles/base.css';
 import '../styles/build.css';
+import '../styles/home.css';
 import '../styles/theme.css';
+import { getHomePageData } from '../utils/home-page';
+
+const { characters, locale } = getHomePageData('en');
 ---
 
 <html lang="en">
@@ -14,8 +21,41 @@ import '../styles/theme.css';
     <meta name="generator" content={Astro.generator} />
     <title>Genshin Builds</title>
   </head>
-  <body>
-    <Header locale="en" />
-    <h1>Genshin Builds</h1>
+  <body data-element="anemo">
+    <Header locale={locale} lang="en" />
+    <main class="home-page">
+      <h1>Genshin Builds</h1>
+      <HomeFilters locale={locale} />
+
+      <div class="character-grid">
+        {
+          characters.map((character, index) => (
+            <a
+              class={`character-card ${character.element}`}
+              href={`/en/${character.slug}`}
+              aria-label={`Open ${character.name} builds`}
+              data-character-card
+              data-element={character.element}
+              data-name={character.name}
+              data-rarity={character.rarity}
+              data-weapon={character.weapon}
+            >
+              <Image
+                src={character.portrait}
+                alt={`${character.name} portrait`}
+                loading={index < 12 ? 'eager' : 'lazy'}
+                width="72"
+                height="72"
+              />
+              <span>{character.name}</span>
+            </a>
+          ))
+        }
+      </div>
+    </main>
+    <Footer lang="en" />
+    <script>
+      import '../scripts/character-filters';
+    </script>
   </body>
 </html>

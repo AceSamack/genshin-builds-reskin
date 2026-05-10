@@ -1,6 +1,33 @@
 ---
 import { t } from '../utils/i18n';
 const { artifacts, locale } = Astro.props;
+
+type ArtifactSetItem = {
+  name: string;
+  pieces: number;
+  note?: string;
+  noteId?: string;
+};
+
+type ArtifactSetGroup = {
+  items: ArtifactSetItem[];
+  choose?: boolean;
+};
+
+type ArtifactSetRank = {
+  groups: ArtifactSetGroup[];
+};
+
+type StatItem = {
+  name: string;
+  note?: string;
+  noteId?: string;
+};
+
+type SubstatPriority = StatItem | { items: StatItem[] };
+
+const isSubstatGroup = (item: SubstatPriority): item is { items: StatItem[] } =>
+  'items' in item;
 ---
 
 <div class="card">
@@ -11,44 +38,187 @@ const { artifacts, locale } = Astro.props;
     <h3>{t(locale, 'ui', 'Sets')}</h3>
 
     {
-      artifacts.sets.artifact_sets.map(
-        (
-          set: {
-            items: { name: string; pieces: number; note: string }[];
-            choose: boolean;
-          },
-          i: number,
-        ) => (
-          <div style="margin-bottom: 10px;">
-            <div>
-              <strong>{i + 1}.</strong>{' '}
-              {set.items[0] && (
-                <span>
-                  {set.items[0].name}{' '}
-                  <span class="bold">
-                    ({set.items[0].pieces}) {set.items[0].note ? '*' : ''}
+      artifacts.sets.artifact_sets.map((rank: ArtifactSetRank, i: number) => (
+        <div style="margin-bottom: 10px;">
+          <div>
+            <strong>{i + 1}.</strong>{' '}
+            {rank.groups[0] && (
+              <>
+                {rank.groups[0].choose ? (
+                  <span>
+                    {rank.groups[0].items[0] && (
+                      <>
+                        {rank.groups[0].items[0].name}{' '}
+                        <span class="bold">
+                          ({rank.groups[0].items[0].pieces})
+                        </span>
+                        {rank.groups[0].items[0].noteId ? (
+                          <a
+                            class="note-link"
+                            href={`#${rank.groups[0].items[0].noteId}`}
+                          >
+                            *
+                          </a>
+                        ) : rank.groups[0].items[0].note ? (
+                          '*'
+                        ) : (
+                          ''
+                        )}
+                      </>
+                    )}
+                    {rank.groups[0].items.slice(1).map((item) => (
+                      <div>
+                        {item.name}{' '}
+                        <span class="bold">({item.pieces})</span>
+                        {item.noteId ? (
+                          <a class="note-link" href={`#${item.noteId}`}>
+                            *
+                          </a>
+                        ) : item.note ? (
+                          '*'
+                        ) : (
+                          ''
+                        )}
+                      </div>
+                    ))}
+                    <div class="bold">{t(locale, 'ui', 'Choose Two')}</div>
                   </span>
+                ) : (
+                  <span>
+                    {rank.groups[0].items.map((item, itemIndex) => (
+                      <>
+                        {itemIndex > 0 && ' / '}
+                        {item.name}{' '}
+                        <span class="bold">({item.pieces})</span>
+                        {item.noteId ? (
+                          <a class="note-link" href={`#${item.noteId}`}>
+                            *
+                          </a>
+                        ) : item.note ? (
+                          '*'
+                        ) : (
+                          ''
+                        )}
+                      </>
+                    ))}
+                  </span>
+                )}
+              </>
+            )}
+          </div>
+
+          {rank.groups.slice(1).map((group) => (
+            <div class="alt">
+              &asymp;{' '}
+              {group.choose ? (
+                <span>
+                  {group.items[0] && (
+                    <>
+                      {group.items[0].name}{' '}
+                      <span class="bold">({group.items[0].pieces})</span>
+                      {group.items[0].noteId ? (
+                        <a class="note-link" href={`#${group.items[0].noteId}`}>
+                          *
+                        </a>
+                      ) : group.items[0].note ? (
+                        '*'
+                      ) : (
+                        ''
+                      )}
+                    </>
+                  )}
+                  {group.items.slice(1).map((item) => (
+                    <div>
+                      {item.name}{' '}
+                      <span class="bold">({item.pieces})</span>
+                      {item.noteId ? (
+                        <a class="note-link" href={`#${item.noteId}`}>
+                          *
+                        </a>
+                      ) : item.note ? (
+                        '*'
+                      ) : (
+                        ''
+                      )}
+                    </div>
+                  ))}
+                  <div class="bold">{t(locale, 'ui', 'Choose Two')}</div>
+                </span>
+              ) : (
+                <span>
+                  {group.items.map((item, itemIndex) => (
+                    <>
+                      {itemIndex > 0 && ' / '}
+                      {item.name}{' '}
+                      <span class="bold">({item.pieces})</span>
+                      {item.noteId ? (
+                        <a class="note-link" href={`#${item.noteId}`}>
+                          *
+                        </a>
+                      ) : item.note ? (
+                        '*'
+                      ) : (
+                        ''
+                      )}
+                    </>
+                  ))}
                 </span>
               )}
             </div>
+          ))}
+        </div>
+      ))
+    }
 
-            {set.items
-              .slice(1)
-              .map((item: { name: string; pieces: number; note: string }) => (
-                <div class="alt">
-                  {set.choose ? '' : '≈ '}
-                  {item.name}{' '}
-                  <span class="bold">
-                    ({item.pieces}) {item.note ? '*' : ''}
-                  </span>
-                </div>
-              ))}
+    {
+      artifacts.sets.conditional?.length > 0 && (
+        <div style="margin-top: 14px;">
+          <div class="bold">{t(locale, 'ui', 'Conditional (See Notes):')}</div>
 
-            <span class="bold">
-              {set.choose ? t(locale, 'ui', 'Choose Two') : ''}
-            </span>
-          </div>
-        ),
+          {artifacts.sets.conditional.map((group: ArtifactSetGroup) => (
+            <div>
+              {group.choose ? (
+                <span>
+                  {group.items.map((item) => (
+                    <div>
+                      {item.name}{' '}
+                      <span class="bold">({item.pieces})</span>
+                      {item.noteId ? (
+                        <a class="note-link" href={`#${item.noteId}`}>
+                          *
+                        </a>
+                      ) : item.note ? (
+                        '*'
+                      ) : (
+                        ''
+                      )}
+                    </div>
+                  ))}
+                  <div class="bold">{t(locale, 'ui', 'Choose Two')}</div>
+                </span>
+              ) : (
+                <span>
+                  {group.items.map((item, itemIndex) => (
+                    <>
+                      {itemIndex > 0 && ' / '}
+                      {item.name}{' '}
+                      <span class="bold">({item.pieces})</span>
+                      {item.noteId ? (
+                        <a class="note-link" href={`#${item.noteId}`}>
+                          *
+                        </a>
+                      ) : item.note ? (
+                        '*'
+                      ) : (
+                        ''
+                      )}
+                    </>
+                  ))}
+                </span>
+              )}
+            </div>
+          ))}
+        </div>
       )
     }
   </div>
@@ -58,38 +228,71 @@ const { artifacts, locale } = Astro.props;
     <h3>{t(locale, 'ui', 'Main Stats')}</h3>
 
     <div>
-      <strong>{t(locale, 'ui', 'Sands')}:</strong>
+      <strong>{t(locale, 'ui', 'Sands')}:</strong>{' '}
       {
-        artifacts.mainstats.main_stats.sands
-          .map(
-            (stat: { name: string; note: string }) =>
-              `${stat.name} ${stat.note ? '*' : ''}`,
-          )
-          .join(' / ')
+        artifacts.mainstats.main_stats.sands.map(
+          (stat: StatItem, statIndex: number) => (
+            <>
+              {statIndex > 0 && ' / '}
+              {stat.name}
+              {stat.noteId ? (
+                <a class="note-link" href={`#${stat.noteId}`}>
+                  *
+                </a>
+              ) : stat.note ? (
+                '*'
+              ) : (
+                ''
+              )}
+            </>
+          ),
+        )
       }
     </div>
 
     <div>
-      <strong>{t(locale, 'ui', 'Goblet')}:</strong>
+      <strong>{t(locale, 'ui', 'Goblet')}:</strong>{' '}
       {
-        artifacts.mainstats.main_stats.goblet
-          .map(
-            (stat: { name: string; note: string }) =>
-              `${stat.name} ${stat.note ? '*' : ''}`,
-          )
-          .join(' / ')
+        artifacts.mainstats.main_stats.goblet.map(
+          (stat: StatItem, statIndex: number) => (
+            <>
+              {statIndex > 0 && ' / '}
+              {stat.name}
+              {stat.noteId ? (
+                <a class="note-link" href={`#${stat.noteId}`}>
+                  *
+                </a>
+              ) : stat.note ? (
+                '*'
+              ) : (
+                ''
+              )}
+            </>
+          ),
+        )
       }
     </div>
 
     <div>
-      <strong>{t(locale, 'ui', 'Circlet')}:</strong>
+      <strong>{t(locale, 'ui', 'Circlet')}:</strong>{' '}
       {
-        artifacts.mainstats.main_stats.circlet
-          .map(
-            (stat: { name: string; note: string }) =>
-              `${stat.name} ${stat.note ? '*' : ''}`,
-          )
-          .join(' / ')
+        artifacts.mainstats.main_stats.circlet.map(
+          (stat: StatItem, statIndex: number) => (
+            <>
+              {statIndex > 0 && ' / '}
+              {stat.name}
+              {stat.noteId ? (
+                <a class="note-link" href={`#${stat.noteId}`}>
+                  *
+                </a>
+              ) : stat.note ? (
+                '*'
+              ) : (
+                ''
+              )}
+            </>
+          ),
+        )
       }
     </div>
   </div>
@@ -100,12 +303,55 @@ const { artifacts, locale } = Astro.props;
 
     {
       artifacts.substats.substats_priority.map(
-        (s: string | { name: string; note?: string }, i: number) => (
-          <div>
-            <strong>{i + 1}.</strong> {typeof s === 'string' ? s : s.name}{' '}
-            {typeof s !== 'string' && s.note ? '*' : ''}
-          </div>
-        ),
+        (stat: SubstatPriority, i: number) =>
+          isSubstatGroup(stat) ? (
+            <div>
+              <div>
+                <strong>{i + 1}.</strong>{' '}
+                {stat.items[0] && (
+                  <>
+                    {stat.items[0].name}
+                    {stat.items[0].noteId ? (
+                      <a class="note-link" href={`#${stat.items[0].noteId}`}>
+                        *
+                      </a>
+                    ) : stat.items[0].note ? (
+                      '*'
+                    ) : (
+                      ''
+                    )}
+                  </>
+                )}
+              </div>
+              {stat.items.slice(1).map((item) => (
+                <div class="alt">
+                  &asymp; {item.name}
+                  {item.noteId ? (
+                    <a class="note-link" href={`#${item.noteId}`}>
+                      *
+                    </a>
+                  ) : item.note ? (
+                    '*'
+                  ) : (
+                    ''
+                  )}
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div>
+              <strong>{i + 1}.</strong> {stat.name}
+              {stat.noteId ? (
+                <a class="note-link" href={`#${stat.noteId}`}>
+                  *
+                </a>
+              ) : stat.note ? (
+                '*'
+              ) : (
+                ''
+              )}
+            </div>
+          ),
       )
     }
   </div>

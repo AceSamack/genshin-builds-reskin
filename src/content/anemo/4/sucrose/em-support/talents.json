@@ -1,0 +1,24 @@
+{
+    "talents": [
+        {
+            "items": [
+                {
+                    "name": "Burst"
+                }
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "Skill"
+                }
+            ]
+        }
+    ],
+    "notes": [
+        {
+            "en": "[[character:sucrose]]'s talent levels are not a necessity.",
+            "fr": "Les niveaux de talents de [[character:sucrose]] ne sont pas une nécessité."
+        }
+    ]
+}

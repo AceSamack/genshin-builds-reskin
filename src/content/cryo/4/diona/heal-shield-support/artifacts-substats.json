@@ -1,0 +1,14 @@
+{
+    "substats_priority": [
+        "er",
+        "hp%",
+        {
+            "name": "cr",
+            "note": {
+                "en": "Only recommended when using [[weapon:favonius-warbow]].",
+                "fr": "Uniquement recommandé si l'arme est [[weapon:favonius-warbow]]."
+            }
+        },
+        "hp"
+    ]
+}

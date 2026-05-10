@@ -1,0 +1,18 @@
+{
+    "substats_priority": [
+        {
+            "name": "er",
+            "note": {
+                "en": "Prioritize first until you meet the requirement",
+                "fr": "A prioriser jusqu'à atteindre le seuil requis"
+            }
+        },
+        "cr/cd",
+        {
+            "items": [
+                "atk%",
+                "em"
+            ]
+        }
+    ]
+}

@@ -3,6 +3,7 @@ import '../styles/base.css';
 import '../styles/build.css';
 import '../styles/theme.css';
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import { t } from '../utils/i18n';
 
 const { character, metadata, lang, locale } = Astro.props;
@@ -18,7 +19,12 @@ const { character, metadata, lang, locale } = Astro.props;
     <div class="page">
       <!-- CHARACTER HEADER CARD -->
       <div class="character-header">
-        <img class="character-image" src={metadata?.image} />
+        <img
+          class="character-image"
+          src={metadata?.image}
+          alt=`${character} wish`
+          loading="eager"
+        />
 
         <h1 class="page-title">{character}</h1>
 
@@ -34,5 +40,6 @@ const { character, metadata, lang, locale } = Astro.props;
 
       <slot />
     </div>
+    <Footer lang={lang} />
   </body>
 </html>

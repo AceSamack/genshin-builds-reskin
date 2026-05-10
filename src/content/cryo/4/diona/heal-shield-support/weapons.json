@@ -1,0 +1,64 @@
+{
+    "weapons": [
+        {
+            "items": [
+                {
+                    "name": "favonius-warbow",
+                    "rarity": 4,
+                    "note": {
+                        "en": "It is **recommended** to build some [[stat:cr]] in substats to have a higher chance of triggering the bow passive for energy."
+                    }
+                }
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "sacrificial-bow",
+                    "rarity": 4,
+                    "note": {
+                        "en": "Preferred over **[[weapon:favonius-warbow]]** at higher refinements **(R3+)** when batterying another [[element:cryo]] character."
+                    }
+                }
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "elegy-for-the-end",
+                    "rarity": 5
+                }
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "silvershower-heartstrings",
+                    "rarity": 5,
+                    "note": {
+                        "en": "One of the best choice for stronger shields, however the [[stat:er]] and useful passives of other weapons will generally make it a suboptimal pick."
+                    }
+                }
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "recurve-bow",
+                    "rarity": 3,
+                    "note": {
+                        "en": "One of the best choice for stronger shields, however the [[stat:er]] and useful passives of other weapons will generally make it a suboptimal pick."
+                    }
+                },
+                {
+                    "name": "sequence-of-solitude",
+                    "rarity": 4,
+                    "refinement": 5,
+                    "note": {
+                        "en": "One of the best choice for stronger shields, however the [[stat:er]] and useful passives of other weapons will generally make it a suboptimal pick."
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,111 @@
+{
+    "artifact_sets": [
+        {
+            "groups": [
+                {
+                    "items": [
+                        {
+                            "name": "nighttime-whispers-in-the-echoing-woods",
+                            "pieces": 4,
+                            "note": {
+                                "en": "This ranking assumes **[[character:ningguang]] consistently has a [[element:crystallize]] shield**.",
+                                "fr": "Ce classement suppose que **[[character:ningguang]] a constamment un bouclier de [[element:crystallize]]**."
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "groups": [
+                {
+                    "choose": true,
+                    "items": [
+                        {
+                            "name": "archaic-petra",
+                            "pieces": 2
+                        },
+                        {
+                            "name": "noblesse-oblige",
+                            "pieces": 2
+                        },
+                        {
+                            "name": "atk-set",
+                            "pieces": 2
+                        },
+                        {
+                            "name": "emblem-of-severed-fate",
+                            "pieces": 2,
+                            "note": {
+                                "en": "This set performs worse than other options when [[character:ningguang]] does not need to build [[stat:er]].",
+                                "fr": "Ce set est moins bon que les autres options quand [[character:ningguang]] n'a pas besoin de [[stat:er]]."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "name": "husk-of-opulent-dreams",
+                            "pieces": 4,
+                            "note": {
+                                "en": "This set performs on par with **[[artifact:archaic-petra]] (2) / [[stat:atk-set]] (2)**. With its inclusion in the strongbox, it has become a strong generalist option.",
+                                "fr": "Ce set est aussi bon que **[[artifact:archaic-petra]] (2) / [[stat:atk-set]] (2)**. Avec son ajout à la synthèse, il est devenu une option généraliste solide."
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "groups": [
+                {
+                    "items": [
+                        {
+                            "name": "emblem-of-severed-fate",
+                            "pieces": 4
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "groups": [
+                {
+                    "items": [
+                        {
+                            "name": "archaic-petra",
+                            "pieces": 4
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "conditional": [
+        {
+            "items": [
+                {
+                    "name": "thundersoother",
+                    "pieces": 4,
+                    "note": {
+                        "en": "This set is one of [[character:ningguang]]'s best options in teams where **[[element:electro]] Auras remain on enemies for the entire rotation**.",
+                        "fr": "Ce set est l'une des meilleures options de [[character:ningguang]] dans les équipes où les **auras [[element:electro]] restent sur les ennemis pendant toute la rotation**."
+                    }
+                }
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "lavawalker",
+                    "pieces": 4,
+                    "note": {
+                        "en": "This set is one of [[character:ningguang]]'s best options in teams where **[[element:pyro]] Auras remain on enemies for the entire rotation**.",
+                        "fr": "Ce set est l'une des meilleures options de [[character:ningguang]] dans les équipes où les **auras [[element:pyro]] restent sur les ennemis pendant toute la rotation**."
+                    }
+                }
+            ]
+        }
+    ]
+}

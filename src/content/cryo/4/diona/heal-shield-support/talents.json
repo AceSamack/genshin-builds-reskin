@@ -1,0 +1,20 @@
+{
+    "talents": [
+        {
+            "items": [
+                {
+                    "name": "Burst"
+                },
+                {
+                    "name": "Skill"
+                }
+            ]
+        }
+    ],
+    "notes": [
+        {
+            "en": "Prioritise whichever your [[character:diona]] is geared for (shielder or healer), if built for a balance between the two, level both equally.",
+            "fr": "Priorisez le talent qui correspond à l'orientation de votre [[character:diona]] (bouclier ou soin). Si elle est build pour un équilibre entre les deux, montez les deux au même niveau."
+        }
+    ]
+}

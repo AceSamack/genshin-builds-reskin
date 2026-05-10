@@ -1,0 +1,25 @@
+---
+import faq from '../content/site/faq.json';
+import { marked } from 'marked';
+
+const { lang = 'en' } = Astro.props;
+
+const localized = (value: Record<string, string>) => value[lang] ?? value.en;
+const renderText = (value: string) =>
+  marked.parse(value, { breaks: true }) as string;
+---
+
+<section class="card faq-card">
+  <div set:html={renderText(localized(faq.intro))} />
+</section>
+
+<section class="faq-list">
+  {
+    faq.items.map((item) => (
+      <details class="card faq-item">
+        <summary>{localized(item.question)}</summary>
+        <div set:html={renderText(localized(item.answer))} />
+      </details>
+    ))
+  }
+</section>
