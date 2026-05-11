@@ -1,18 +1,10 @@
 ---
 import '../styles/header.css';
 import { t } from '../utils/i18n';
+import { languages } from '../utils/languages';
 import { getSideMenuData } from '../utils/side-menu';
 
 const { locale, lang, character, page } = Astro.props;
-
-const languages = [
-  { code: 'en', name: 'English' },
-  { code: 'fr', name: 'Français' },
-  { code: 'de', name: 'Deutsch' },
-  { code: 'es', name: 'Español' },
-  { code: 'it', name: 'Italiano' },
-  { code: 'ru', name: 'Русский' },
-];
 
 const currentLang = lang || 'en';
 const menuElements = getSideMenuData(locale);

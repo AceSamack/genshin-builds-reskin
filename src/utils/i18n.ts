@@ -39,6 +39,17 @@ import ruCharacters from '../i18n/ru/characters.json';
 import ruStats from '../i18n/ru/stats.json';
 import ruElements from '../i18n/ru/elements.json';
 import ruUi from '../i18n/ru/ui.json';
+import type { LanguageCode } from './languages';
+
+type LocaleCategory = Record<string, string>;
+type LocaleBundle = {
+  weapon: LocaleCategory;
+  artifact: LocaleCategory;
+  character: LocaleCategory;
+  stat: LocaleCategory;
+  element: LocaleCategory;
+  ui: LocaleCategory;
+};
 
 // Keep locale imports explicit so bundlers include every JSON dictionary.
 const locales = {
@@ -95,7 +106,7 @@ const locales = {
     element: ruElements,
     ui: ruUi,
   },
-};
+} satisfies Record<LanguageCode, LocaleBundle>;
 
 /**
  * Returns the locale bundle for a requested language.
@@ -108,9 +119,7 @@ const locales = {
  */
 export function getLocale(lang: string | undefined) {
   const localeKey =
-    typeof lang === 'string' && lang in locales
-      ? (lang as keyof typeof locales)
-      : 'en';
+    typeof lang === 'string' && lang in locales ? (lang as LanguageCode) : 'en';
   return locales[localeKey];
 }
 

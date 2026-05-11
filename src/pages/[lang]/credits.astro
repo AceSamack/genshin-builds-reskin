@@ -2,6 +2,9 @@
 import SimplePageLayout from '../../layouts/SimplePageLayout.astro';
 import CreditsContent from '../../components/CreditsContent.astro';
 import { getLocale } from '../../utils/i18n';
+import { getLanguageStaticPaths } from '../../utils/routes';
+
+export const getStaticPaths = getLanguageStaticPaths;
 
 const lang = Astro.params.lang ?? 'en';
 const locale = getLocale(lang);

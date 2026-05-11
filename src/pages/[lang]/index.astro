@@ -8,6 +8,9 @@ import '../../styles/build.css';
 import '../../styles/home.css';
 import '../../styles/theme.css';
 import { getHomePageData } from '../../utils/home-page';
+import { getLanguageStaticPaths } from '../../utils/routes';
+
+export const getStaticPaths = getLanguageStaticPaths;
 
 const requestedLang = Array.isArray(Astro.params.lang)
   ? Astro.params.lang[0]
