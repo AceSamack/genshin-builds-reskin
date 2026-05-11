@@ -2,6 +2,7 @@
 import '../styles/header.css';
 import { t } from '../utils/i18n';
 import { languages } from '../utils/languages';
+import { localizedPath } from '../utils/paths';
 import { getSideMenuData } from '../utils/side-menu';
 
 const { locale, lang, character, page } = Astro.props;
@@ -27,7 +28,7 @@ const menuElements = getSideMenuData(locale);
       </button>
 
       <a
-        href={`/${currentLang}/`}
+        href={localizedPath(currentLang)}
         class="logo-link"
         aria-label="Genshin Builds home"
       >
@@ -72,7 +73,7 @@ const menuElements = getSideMenuData(locale);
       {
         /* Home uses the same row styling as element groups for a cohesive menu. */
       }
-      <a class="side-menu-link" href={`/${currentLang}/`}>
+      <a class="side-menu-link" href={localizedPath(currentLang)}>
         {t(locale, 'ui', 'Home')}
       </a>
       {
@@ -86,7 +87,7 @@ const menuElements = getSideMenuData(locale);
                   <ul>
                     {rarity.characters.map((character) => (
                       <li>
-                        <a href={`/${currentLang}/${character.slug}`}>
+                        <a href={localizedPath(currentLang, character.slug)}>
                           {character.name}
                         </a>
                       </li>
@@ -144,17 +145,17 @@ const menuElements = getSideMenuData(locale);
     });
   });
 
+  const baseUrl = import.meta.env.BASE_URL.endsWith('/')
+    ? import.meta.env.BASE_URL
+    : `${import.meta.env.BASE_URL}/`;
   const select = document.getElementById('language-select');
   select?.addEventListener('change', (e) => {
     const lang = e.target.value;
     const char = select.dataset.character;
     const page = select.dataset.page;
     // Preserve the current page type when switching languages.
-    const path = char
-      ? `/${lang}/${char}`
-      : page
-        ? `/${lang}/${page}`
-        : `/${lang}`;
+    const suffix = char ? `${lang}/${char}` : page ? `${lang}/${page}` : lang;
+    const path = `${baseUrl}${suffix}`;
     window.location.href = path;
   });
 </script>

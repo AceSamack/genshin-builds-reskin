@@ -1,12 +1,14 @@
 ---
+import { localizedPath } from '../utils/paths';
+
 const { lang = 'en' } = Astro.props;
 ---
 
 <footer class="site-footer">
   <nav class="footer-links" aria-label="Footer">
-    <a href={`/${lang}/credits`}>Credits</a>
-    <a href={`/${lang}/faq`}>FAQ</a>
-    <a href={`/${lang}/changelog`}>Changelog</a>
+    <a href={localizedPath(lang, 'credits')}>Credits</a>
+    <a href={localizedPath(lang, 'faq')}>FAQ</a>
+    <a href={localizedPath(lang, 'changelog')}>Changelog</a>
   </nav>
 
   <p>This website is not affiliated with HoYoverse.</p>

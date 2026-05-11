@@ -8,6 +8,7 @@ import '../styles/build.css';
 import '../styles/home.css';
 import '../styles/theme.css';
 import { getHomePageData } from '../utils/home-page';
+import { localizedPath, sitePath } from '../utils/paths';
 
 const { characters, locale } = getHomePageData('en');
 ---
@@ -15,8 +16,8 @@ const { characters, locale } = getHomePageData('en');
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href={sitePath('favicon.svg')} />
+    <link rel="icon" href={sitePath('favicon.ico')} />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Genshin Builds</title>
@@ -33,7 +34,7 @@ const { characters, locale } = getHomePageData('en');
           characters.map((character, index) => (
             <a
               class={`character-card ${character.element}`}
-              href={`/en/${character.slug}`}
+              href={localizedPath('en', character.slug)}
               aria-label={`Open ${character.name} builds`}
               data-character-card
               data-element={character.element}
