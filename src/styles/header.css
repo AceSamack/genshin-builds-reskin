@@ -328,4 +328,11 @@
   .side-menu {
     height: calc(100vh - 54px);
   }
+
+  .side-menu {
+    width: 100vw;
+    border-right: 0;
+    background: color-mix(in srgb, rgb(10, 10, 10) 70%, var(--bg));
+    backdrop-filter: none;
+  }
 }

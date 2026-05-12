@@ -118,7 +118,10 @@ const menuElements = getSideMenuData(locale);
     openButton?.setAttribute('aria-expanded', String(isOpen));
   }
 
-  openButton?.addEventListener('click', () => setMenuOpen(true));
+  openButton?.addEventListener('click', () => {
+    const isOpen = openButton.getAttribute('aria-expanded') === 'true';
+    setMenuOpen(!isOpen);
+  });
   closeButtons.forEach((button) => {
     button.addEventListener('click', () => setMenuOpen(false));
   });
