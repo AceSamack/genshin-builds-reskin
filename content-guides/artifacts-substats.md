@@ -20,7 +20,8 @@ src/content/<element>/<rarity>/<character>/<build>/artifacts-substats.json
     {
       "name": "cr",
       "note": {
-        "en": "Prioritize until your ratio is stable."
+        "en": "Prioritize until your ratio is stable.",
+        "fr": "Priorisez jusqu'à ce que votre ratio soit stable."
       }
     },
     {
@@ -45,13 +46,34 @@ src/content/<element>/<rarity>/<character>/<build>/artifacts-substats.json
     rank and later stats render with `≈`
 - `name`: Stat ID from `src/i18n/<lang>/stats.json`.
 - `items`: List of stat strings or stat objects for same-rank alternatives.
-- `note`: Optional localized editorial note.
+- `note`: Optional localized editorial note. Adds a `*` marker beside the
+  substat and renders in the `Substats` part of the artifact notes section.
 
 ## Notes
 
 - String items are concise and should be used when no note is needed.
 - Object items should be used when a substat needs an explanation.
-- Alternative groups are useful when two stats share a priority slot:
+- Adding `note` to a substat automatically adds a `*` marker next to that
+  substat in the substat priority list.
+- The same `note` also automatically creates a matching note entry under the
+  `Substats` part of `Regarding Artifacts Choices:`.
+- Notes support Markdown and inline translation tokens.
+
+Example with the same note translated in different languages:
+
+```json
+{
+  "name": "em",
+  "note": {
+    "en": "Use when reaction damage matters.",
+    "fr": "A utiliser lorsque les degats de reaction sont importants."
+  }
+}
+```
+
+## Alternative Groups
+
+Alternative groups are useful when two stats share a priority slot.
 
 ```json
 {
@@ -59,7 +81,8 @@ src/content/<element>/<rarity>/<character>/<build>/artifacts-substats.json
     {
       "name": "er",
       "note": {
-        "en": "Prioritize first until you meet the requirement."
+        "en": "Prioritize first until you meet the requirement.",
+        "fr": "Priorisez d'abord jusqu'a atteindre le besoin requis."
       }
     },
     "cr/cd",
@@ -81,5 +104,3 @@ This renders as:
 3. ATK%
 ≈ Elemental Mastery
 ```
-
-- Notes support Markdown and inline translation tokens.

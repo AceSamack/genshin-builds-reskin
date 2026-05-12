@@ -1,0 +1,71 @@
+# metadata.json
+
+`metadata.json` describes character-level display metadata. It lives in the
+character folder, not inside a build folder.
+
+The site also uses this file to build the character cards on the home page,
+including the data used by homepage filters.
+
+```txt
+src/content/<element>/<rarity>/<character>/metadata.json
+```
+
+## Expected Shape
+
+```json
+{
+  "weapon": "bow",
+  "last_updated": "5.7",
+  "image": "https://example.com/character-full.png",
+  "portrait": "https://example.com/character-icon.png"
+}
+```
+
+## Fields
+
+- `weapon`: Character weapon type used by the home page character data and
+  filtering. Common values are `sword`, `claymore`, `polearm`, `bow`, and
+  `catalyst`.
+- `last_updated`: Genshin version string shown in the page header.
+- `image`: Large character image URL shown in the character page header. Should
+  come from the official HoYoWiki.
+- `portrait`: Small character icon URL used on the home page character list.
+  Should come from the official HoYoWiki.
+
+## Images
+
+Both `image` and `portrait` must come from the official HoYoWiki:
+
+```txt
+https://wiki.hoyolab.com/pc/genshin/home
+```
+
+- Use the large character image for `image`.
+- Use the small character icon for `portrait`.
+- Do not use fan wiki, cropped screenshots, or unofficial image links.
+
+## Folder Values
+
+Some character information does not live inside `metadata.json`; it comes from
+the folder path instead.
+
+```txt
+src/content/<element>/<rarity>/<character>/metadata.json
+```
+
+- `<element>` controls the character page theme color and the element filter on
+  the home page.
+- `<rarity>` controls the rarity filter on the home page.
+- `<character>` is the character slug used in URLs and translation lookups.
+
+Example:
+
+```txt
+src/content/pyro/4/amber/metadata.json
+```
+
+This means:
+
+- element: `pyro`
+- rarity: `4`
+- character slug: `amber`

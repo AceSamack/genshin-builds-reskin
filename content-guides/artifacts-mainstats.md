@@ -11,16 +11,10 @@ src/content/<element>/<rarity>/<character>/<build>/artifacts-mainstats.json
 
 ```json
 {
-  "notes": [
-    {
-      "en": "Main stat rankings assume the listed Energy Recharge target is met."
-    }
-  ],
   "main_stats": {
     "sands": [
-      {
-        "name": "atk%"
-      },
+      "er",
+      "atk%",
       {
         "name": "em",
         "note": {
@@ -30,7 +24,7 @@ src/content/<element>/<rarity>/<character>/<build>/artifacts-mainstats.json
     ],
     "goblet": [
       {
-        "name": "Pyro DMG"
+        "name": "pyro-dmg"
       }
     ],
     "circlet": [
@@ -38,7 +32,12 @@ src/content/<element>/<rarity>/<character>/<build>/artifacts-mainstats.json
         "name": "cr"
       }
     ]
-  }
+  },
+  "notes": [
+    {
+      "en": "Main stat rankings assume the listed [[stat:er]] target is met."
+    }
+  ]
 }
 ```
 
@@ -49,8 +48,12 @@ src/content/<element>/<rarity>/<character>/<build>/artifacts-mainstats.json
   - `goblet`
   - `circlet`
 - Each slot is an ordered array of stat items.
+- A stat item can be either:
+  - A string stat ID, such as `"er"` or `"atk%"`.
+  - An object with `name` and optional `note`.
 - `name`: Main stat ID or display string.
-- `note`: Optional localized editorial note.
+- `note`: Optional localized editorial note. Use this only on object stat
+  items.
 - `notes`: Optional top-level section notes shown under
   `Regarding Artifacts Choices:` without adding a `*` marker to any stat.
 
@@ -59,4 +62,20 @@ src/content/<element>/<rarity>/<character>/<build>/artifacts-mainstats.json
 - Stat IDs such as `atk%`, `em`, `cr`, and `cd` are translated through
   `src/i18n/<lang>/stats.json`.
 - Custom display strings such as `Pyro DMG` can be used when no i18n ID exists.
+- Adding `note` to an object stat automatically adds a `*` marker next to that
+  stat in the main stat list.
+- The same `note` also automatically creates a matching note entry under the
+  `Main Stats` part of `Regarding Artifacts Choices:`.
 - Notes support Markdown and inline translation tokens.
+
+Example with the same note translated in different languages:
+
+```json
+{
+  "name": "em",
+  "note": {
+    "en": "Use when reaction damage matters.",
+    "fr": "A utiliser lorsque les dégâts de reaction sont importants."
+  }
+}
+```

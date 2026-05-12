@@ -24,6 +24,9 @@ Character-level files live directly inside the character folder:
 src/content/pyro/4/amber/metadata.json
 ```
 
+`metadata.json` is used for character display data and the home page character
+filters. Images in this file must come from the official HoYoWiki.
+
 Build-level files live inside each build folder:
 
 ```txt
@@ -83,6 +86,10 @@ content loader, including:
 - Localized editorial objects must include `en`; other languages are optional.
 - Requested language falls back to `en`.
 - Notes support Markdown and inline translation tokens.
+- Item notes automatically add a `*` marker next to the item and create a
+  matching entry in the relevant notes section.
+- Top-level section notes do not add a `*` marker because they are not attached
+  to one specific item.
 
 ## Section-Level Notes
 
@@ -105,6 +112,47 @@ Example:
 
 Section-level notes render inside the matching notes section, such as
 `Regarding Artifacts Choices:`, without adding a `*` marker to any listed item.
+
+## Item-Level Notes
+
+Use an item-level `note` when the explanation belongs to one specific weapon,
+artifact, stat, or talent.
+
+Example:
+
+```json
+{
+  "name": "favonius-warbow",
+  "rarity": 4,
+  "note": {
+    "en": "Useful when the team needs extra energy.",
+    "fr": "Utile lorsque l'equipe a besoin de plus d'energie."
+  }
+}
+```
+
+This automatically:
+
+- adds a `*` marker next to the item in the build card
+- creates the matching entry under the correct notes heading
+
+For example, weapon notes render under `Regarding Weapons Choices:`, artifact
+notes render under `Regarding Artifacts Choices:`, and talent notes render under
+`Regarding Talents Choices:`.
+
+## What To Edit
+
+- Use [metadata.md](./metadata.md) for character images, weapon type, and
+  update version.
+- Use [build-notes.md](./build-notes.md) for the build title, best-build badge,
+  build-wide notes, and calculation credits.
+- Use [weapons.md](./weapons.md) for ranked weapons and conditional weapons.
+- Use [artifacts-sets.md](./artifacts-sets.md) for artifact set rankings and
+  conditional artifact sets.
+- Use [artifacts-mainstats.md](./artifacts-mainstats.md) for sands, goblet, and
+  circlet main stats.
+- Use [artifacts-substats.md](./artifacts-substats.md) for substat priority.
+- Use [talents.md](./talents.md) for talent priority.
 
 ## i18n Dictionary Files
 

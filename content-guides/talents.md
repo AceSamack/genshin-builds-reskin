@@ -21,7 +21,8 @@ src/content/<element>/<rarity>/<character>/<build>/talents.json
         {
           "name": "Normal Attack",
           "note": {
-            "en": "Level this first for Charged Attack builds."
+            "en": "Level this first for Charged Attack builds.",
+            "fr": "A monter en premier pour les builds d'attaques chargees."
           }
         }
       ]
@@ -34,7 +35,8 @@ src/content/<element>/<rarity>/<character>/<build>/talents.json
         {
           "name": "Skill",
           "note": {
-            "en": "Prioritize Skill first if this character is mainly used for shielding."
+            "en": "Prioritize Skill first if this character is mainly used for shielding.",
+            "fr": "Priorisez le skill si ce personnage est surtout utilise pour son bouclier."
           }
         }
       ]
@@ -51,7 +53,8 @@ src/content/<element>/<rarity>/<character>/<build>/talents.json
 - `talents[].items`: Talents in the same priority position. Multiple items
   render on one line with `=`.
 - `items[].name`: Talent display name.
-- `items[].note`: Optional localized editorial note.
+- `items[].note`: Optional localized editorial note. Adds a `*` marker beside
+  the talent and renders in the talent notes section.
 
 ## Notes
 
@@ -70,7 +73,8 @@ src/content/<element>/<rarity>/<character>/<build>/talents.json
         {
           "name": "Skill",
           "note": {
-            "en": "Prioritize Skill first if this character is mainly used for shielding."
+            "en": "Prioritize Skill first if this character is mainly used for shielding.",
+            "fr": "Priorisez le skill si ce personnage est surtout utilise pour son bouclier."
           }
         }
       ]
@@ -85,4 +89,20 @@ This renders as:
 1. Burst = Skill*
 ```
 
+- Adding `note` to a talent automatically adds a `*` marker next to that talent
+  in the talent priority list.
+- The same `note` also automatically creates a matching note entry under
+  `Regarding Talents Choices:`.
 - Notes support Markdown and inline translation tokens.
+
+Example with the same note translated in different languages:
+
+```json
+{
+  "name": "Burst",
+  "note": {
+    "en": "Level this first if most of the build's damage comes from Burst.",
+    "fr": "A monter en premier si la majorite des degats du build viennent de l'ult."
+  }
+}
+```
