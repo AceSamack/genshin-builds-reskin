@@ -53,7 +53,7 @@ export function getSideMenuData(locale: any) {
 
           return {
             rarity,
-            label: `${rarity}\u2605`,
+            label: `${rarity} \u2605`,
             characters,
           };
         })

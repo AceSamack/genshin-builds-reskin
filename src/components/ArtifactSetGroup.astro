@@ -27,7 +27,7 @@ const { group, locale } = Astro.props as {
     <>
       {group.items[0] && (
         <>
-          {group.items[0].name}{' '}
+          {group.items[0].name}&nbsp;
           <span class="bold">({group.items[0].pieces})</span>
           {group.items[0].noteId ? (
             <a class="note-link" href={`#${group.items[0].noteId}`}>
@@ -42,7 +42,8 @@ const { group, locale } = Astro.props as {
       )}
       {group.items.slice(1).map((item) => (
         <div class="alt">
-          {item.name} <span class="bold">({item.pieces})</span>
+          {item.name}&nbsp;
+          <span class="bold">({item.pieces})</span>
           {item.noteId ? (
             <a class="note-link" href={`#${item.noteId}`}>
               *
@@ -61,7 +62,8 @@ const { group, locale } = Astro.props as {
       {group.items.map((item, itemIndex) => (
         <>
           {itemIndex > 0 && ' / '}
-          {item.name} <span class="bold">({item.pieces})</span>
+          {item.name}&nbsp;
+          <span class="bold">({item.pieces})</span>
           {item.noteId ? (
             <a class="note-link" href={`#${item.noteId}`}>
               *

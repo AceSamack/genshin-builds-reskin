@@ -30,12 +30,12 @@ const formatRefinement = (refinement?: number | string) =>
     weapons.weapons.map((position: { items: WeaponItem[] }, i: number) => (
       <div style="margin-bottom: 10px;">
         <div>
-          <strong>{i + 1}.</strong>{' '}
+          <strong>{i + 1}.</strong>&nbsp;
           {position.items[0] && (
             <span>
-              {position.items[0].name}{' '}
+              {position.items[0].name}&nbsp;
               <span class="bold">
-                ({position.items[0].rarity}&#10025;)
+                ({position.items[0].rarity} {"\u2605"})
                 {formatRefinement(position.items[0].refinement)}
                 {position.items[0].noteId ? (
                   <a class="note-link" href={`#${position.items[0].noteId}`}>
@@ -53,9 +53,9 @@ const formatRefinement = (refinement?: number | string) =>
 
         {position.items.slice(1).map((weapon) => (
           <div class="alt">
-            &asymp; {weapon.name}{' '}
+            &asymp; {weapon.name}&nbsp;
             <span class="bold">
-              ({weapon.rarity}&#10025;)
+              ({weapon.rarity} {"\u2605"})
               {formatRefinement(weapon.refinement)}
               {weapon.noteId ? (
                 <a class="note-link" href={`#${weapon.noteId}`}>
@@ -81,9 +81,9 @@ const formatRefinement = (refinement?: number | string) =>
 
         {weapons.conditional.map((weapon: WeaponItem) => (
           <div>
-            {weapon.name}{' '}
+            {weapon.name}&nbsp;
             <span class="bold">
-              ({weapon.rarity}&#10025;)
+              ({weapon.rarity} {"\u2605"})
               {formatRefinement(weapon.refinement)}
               {weapon.noteId ? (
                 <a class="note-link" href={`#${weapon.noteId}`}>
