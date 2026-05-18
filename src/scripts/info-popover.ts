@@ -7,11 +7,6 @@ if (!infoPopoverWindow.__infoPopoversReady) {
 
   const VIEWPORT_PADDING = 8;
   const POPOVER_GAP = 8;
-  const cardPortals = new WeakMap<
-    HTMLElement,
-    { card: HTMLElement; marker: Comment }
-  >();
-  const portaledCards = new WeakMap<HTMLElement, HTMLElement>();
   let ignoreNextClick = false;
 
   /**
@@ -32,52 +27,10 @@ if (!infoPopoverWindow.__infoPopoversReady) {
   /**
    * Finds the popover wrapper for an event target.
    */
-  const getClosestPopover = (target: EventTarget | null) => {
-    if (!(target instanceof HTMLElement)) return null;
-
-    const card = target.closest<HTMLElement>('.info-popover-card');
-    const portaledPopover = card ? portaledCards.get(card) : null;
-
-    return portaledPopover ?? target.closest<HTMLElement>('.info-popover');
-  };
-
-  /**
-   * Finds the card for a popover, including cards moved to the document body.
-   */
-  const getPopoverCard = (popover: HTMLElement) =>
-    cardPortals.get(popover)?.card ??
-    popover.querySelector<HTMLElement>('.info-popover-card');
-
-  /**
-   * Moves an opened popover card to the document body so mobile browsers can
-   * hit-test and scroll it independently from the surrounding inline layout.
-   */
-  const portalPopoverCard = (popover: HTMLElement) => {
-    if (cardPortals.has(popover)) return;
-
-    const card = popover.querySelector<HTMLElement>('.info-popover-card');
-    if (!card) return;
-
-    const marker = document.createComment('info-popover-card');
-    card.before(marker);
-    card.classList.add('is-portaled');
-    document.body.append(card);
-    cardPortals.set(popover, { card, marker });
-    portaledCards.set(card, popover);
-  };
-
-  /**
-   * Restores a portaled card to its original spot in the popover markup.
-   */
-  const restorePopoverCard = (popover: HTMLElement) => {
-    const portal = cardPortals.get(popover);
-    if (!portal) return;
-
-    portal.card.classList.remove('is-portaled');
-    portal.marker.replaceWith(portal.card);
-    cardPortals.delete(popover);
-    portaledCards.delete(portal.card);
-  };
+  const getClosestPopover = (target: EventTarget | null) =>
+    target instanceof HTMLElement
+      ? target.closest<HTMLElement>('.info-popover')
+      : null;
 
   /**
    * Checks whether an event happened inside a popover card.
@@ -112,10 +65,7 @@ if (!infoPopoverWindow.__infoPopoversReady) {
     const isOpen = popover.classList.toggle('is-open');
     setTriggerExpanded(popover, isOpen);
     if (isOpen) {
-      portalPopoverCard(popover);
       positionPopoverCard(popover);
-    } else {
-      restorePopoverCard(popover);
     }
     closeInfoPopovers(popover);
   };
@@ -165,7 +115,7 @@ if (!infoPopoverWindow.__infoPopoversReady) {
    */
   const positionPopoverCard = (popover: HTMLElement) => {
     const trigger = popover.querySelector<HTMLElement>('.info-popover-trigger');
-    const card = getPopoverCard(popover);
+    const card = popover.querySelector<HTMLElement>('.info-popover-card');
 
     if (!trigger || !card) return;
 
@@ -216,7 +166,6 @@ if (!infoPopoverWindow.__infoPopoversReady) {
         if (popover !== except) {
           popover.classList.remove('is-open');
           setTriggerExpanded(popover, false);
-          restorePopoverCard(popover);
         }
       });
 
