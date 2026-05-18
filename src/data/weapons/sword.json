@@ -1123,11 +1123,11 @@
         "rarity": 5,
         "passive": {
             "en": "HP increased by {{value}}%. Additionally, provides an ATK Bonus based on {{value}}% of the wielder's Max HP.",
-            "de": "Erhöht die LP um {{value}}%. Erhöht den ANG um {{Color|cryo|1,2 %}} der max. LP der mit dieser Waffe ausgerüsteten Figur.",
+            "de": "Erhöht die LP um {{value}}%. Erhöht den ANG um {{value}}% der max. LP der mit dieser Waffe ausgerüsteten Figur.",
             "es": "Aumenta la Vida en un {{value}}%. Además, el personaje que lleve esta arma equipada obtendrá un {{value}}% de Bono de ATQ en proporción a su Vida Máx.",
-            "fr": "Les PV sont augmentés de {{value}}%. Le personnage équipé de l'arme obtient également un bonus d'ATQ équivalant à {{Color|cryo|1,2 %}} de ses PV max.",
-            "it": "I PS aumentano di un {{value}}%. Inoltre, fornisce un bonus ATT pari a un {{Color|cryo|1,2%}} dei PS max del personaggio equipaggiato con quest'arma.",
-            "ru": "Увеличивает HP на {{value}}%. Также даёт бонус атаки, равный {{Color|cryo|1,2%}} от макс. HP экипированного этим оружием персонажа."
+            "fr": "Les PV sont augmentés de {{value}}%. Le personnage équipé de l'arme obtient également un bonus d'ATQ équivalant à {{value}}% de ses PV max.",
+            "it": "I PS aumentano di un {{value}}%. Inoltre, fornisce un bonus ATT pari a un {{value}}% dei PS max del personaggio equipaggiato con quest'arma.",
+            "ru": "Увеличивает HP на {{value}}%. Также даёт бонус атаки, равный {{value}}% от макс. HP экипированного этим оружием персонажа."
         },
         "substat": "cr",
         "level_1": {
