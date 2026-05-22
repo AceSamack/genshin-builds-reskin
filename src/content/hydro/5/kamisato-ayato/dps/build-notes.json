@@ -16,5 +16,11 @@
             "en": "The amount of slashes [[character:kamisato-ayato]] can do during an [[ability:skill]] window is sometimes influenced by the player's set FPS.",
             "fr": "Le nombre de slash que [[character:kamisato-ayato]] peut faire au cours de son [[ability:skill]] est parfois influencé par les FPS du joueur."
         }
+    ],
+    "weapons": [
+        {
+            "author": "XXXX",
+            "link": "https://docs.google.com/spreadsheets/d/1fDBWcW-3g364LQt_FetQJDZ7yn6PV_Mc6UhmS6khKUA/edit?gid=833391058#gid=833391058"
+        }
     ]
 }

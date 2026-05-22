@@ -1,0 +1,17 @@
+{
+    "best": true,
+    "name": {
+        "en": "Low Energy Requirement (Off-Field DPS)",
+        "fr": "Faibles Besoins en Energie (DPS Off-Field)"
+    },
+    "notes": [
+        {
+            "en": "[[character:yelan]]'s primary role is as an off-field [[element:hydro]] DPS who can also enable reactions thanks to her elemental application. Similarly to [[character:xingqiu]], her exquisite throws from [[ability:burst]] require your character to perform the [[ability:na]] action.",
+            "fr": "Le rôle principal de [[character:yelan]] est DPS [[element:hydro]] Off-Field DPS qui permet de déclencher des réactions grâce à son application élémentaire. De la même façon que [[character:xingqiu]], le Dé Exquis de son [[ability:burst]] nécéssite que votre personnage effectue une [[ability:na]]."
+        },
+        {
+            "en": "Big thanks to **Vladone ツ#9281** for helping out",
+            "fr": "Un grand merci à **Vladone ツ#9281** pour son aide"
+        }
+    ]
+}
