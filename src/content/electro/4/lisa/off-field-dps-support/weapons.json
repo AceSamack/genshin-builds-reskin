@@ -1,0 +1,96 @@
+{
+    "weapons": [
+        {
+            "items": [
+                "reliquary-of-truth"
+            ]
+        },
+        {
+            "items": [
+                "vivid-notions"
+            ]
+        },
+        {
+            "items": [
+                "kaguras-verity",
+                {
+                    "name": "a-thousand-floating-dreams",
+                    "note": {
+                        "en": "Only used in **[[element:quicken]]** teams.",
+                        "fr": "Utilisé uniquement pour les équipes **[[element:quicken]]**."
+                    }
+                },
+                "lost-prayer-to-the-sacred-winds"
+            ]
+        },
+        {
+            "items": [
+                "tome-of-the-eternal-flow",
+                "surfs-up"
+            ]
+        },
+        {
+            "items": [
+                "the-widsith"
+            ]
+        },
+        {
+            "items": [
+                "sacrificial-jade",
+                "solar-pearl"
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "flowing-purity",
+                    "note": {
+                        "en": "This weapon is more potent if you can **reliably clear the [[ability:bol]]**.",
+                        "fr": "Cette arme est meilleure si vous pouvez **retirer à coup sûr l'[[ability:bol]]**."
+                    }
+                },
+                "oathsworn-eye"
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "hakushin-ring",
+                    "note": {
+                        "en": "This weapon can give a teamwide DMG% buff, often utilized in [[element:quicken]] teams. Note that the passive cannot be triggered when off-field.",
+                        "fr": "Cette arme peut donner un buff de DGT% à toute l'équipe, souvent utilisée dans les équipes [[element:quicken]]. Notez que le passif ne peux pas être déclenché en étant off-field."
+                    }
+                }
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "mappa-mare",
+                    "note": {
+                        "en": "Only used in [[element:quicken]] teams.",
+                        "f": "Utilisé seulement pour les équipes **[[element:quicken]]**."
+                    }
+                }
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "favonius-codex",
+                    "note": {
+                        "en": "This weapon can be used in teams where [[character:lisa]]'s [[stat:er]] requirement is high, or if your team values the additional particles.",
+                        "fr": "Cette arme peut être utilisée dans les équipes où les besoins en [[stat:er]] de [[character:lisa]]sont hauts, ou si votre équipe a besoin des particules supplémentaires."
+                    }
+                },
+                {
+                    "name": "thrilling-tales-of-dragon-slayers",
+                    "note": {
+                        "en": "This weapon sacrifices a lot of [[character:lisa]]'s personal damage for buffing potential on a single character. It can be recommended if [[character:lisa]] is **low investment** and focused on buffing.",
+                        "fr": "Cette arme sacrifie beaucoup des dégâts personnels de [[character:lisa]] en échange des du potentiel de buff pour un autre personnage. Elle peut être recommandée si [[character:lisa]] a un **faible investissement** et se concentre sur les buffs."
+                    }
+                }
+            ]
+        }
+    ]
+}

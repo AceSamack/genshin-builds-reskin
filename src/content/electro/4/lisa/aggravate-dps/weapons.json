@@ -1,0 +1,80 @@
+{
+    "weapons": [
+        {
+            "items": [
+                "reliquary-of-truth"
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "vivid-notions",
+                    "note": {
+                        "en": "This weapon **works best** in teams where **[[character:lisa]] is enabled to plunge**.",
+                        "fr": "Cette arme **fonctionne au mieux** dans les équipes où **[[character:lisa]] peut faire des attaques plongeantes**."
+                    }
+                }
+            ]
+        },
+        {
+            "items": [
+                "kaguras-verity"
+            ]
+        },
+        {
+            "items": [
+                "lost-prayer-to-the-sacred-winds"
+            ]
+        },
+        {
+            "items": [
+                "tome-of-the-eternal-flow",
+                "surfs-up"
+            ]
+        },
+        {
+            "items": [
+                "a-thousand-floating-dreams",
+                "cashflow-supervision"
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "the-widsith",
+                    "note": {
+                        "en": "At high refinement **[R4-R5]** this weapon starts **performing similarly to [[weapon:lost-prayer-to-the-sacred-winds]]**.",
+                        "fr": "Une fois **[R4-R5]**, cette arme comment à **performer de manière similaire à [[weapon:lost-prayer-to-the-sacred-winds]]**."
+                    }
+                }
+            ]
+        },
+        {
+            "items": [
+                "solar-pearl",
+                "sacrificial-jade"
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "flowing-purity",
+                    "note": {
+                        "en": "This weapon is more potent if you can **reliably clear the [[ability:bol]]**. If you can, this weapon is **equal to or better than [[weapon:mappa-mare]]**. At high refinement **[R5]** with its passive met this is on par with **[[weapon:solar-pearl]]**."
+                    }
+                }
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "mappa-mare",
+                    "note": {
+                        "en": "At high refinement **[R5]** this weapon is **equal to or better than [[weapon:solar-pearl]]**.",
+                        "fr": "Une fois **[R5]**, cette arme est **équivalente ou meilleure que [[weapon:solar-pearl]]**."
+                    }
+                }
+            ]
+        }
+    ]
+}

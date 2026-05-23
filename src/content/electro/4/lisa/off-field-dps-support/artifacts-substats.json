@@ -1,0 +1,14 @@
+{
+    "notes": [
+        {
+            "en": "These options prioritize [[character:lisa]]'s [[ability:burst]] uptime as a defense shredding tool."
+            ,"fr": "Ces options priorisent l'uptime de l'[[ability:burst]] de [[character:lisa]] pour sa réduction de DEF."
+        }
+    ],
+    "substats_priority": [
+        "er",
+        "cr/cd",
+        "atk%",
+        "em"
+    ]
+}

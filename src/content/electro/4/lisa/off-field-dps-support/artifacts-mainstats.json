@@ -1,0 +1,21 @@
+{
+    "main_stats": {
+        "sands": [
+            "er",
+            "atk%",
+            {
+                "name": "em",
+                "note": {
+                    "en": "Only used in **[[element:quicken]]** teams",
+                    "fr": "Utilisé uniquement dans les équipes **[[element:quicken]]**."
+                }
+            }
+        ],
+        "goblet": [
+            "electro-dmg"
+        ],
+        "circlet": [
+            "cr/cd"
+        ]
+    }
+}

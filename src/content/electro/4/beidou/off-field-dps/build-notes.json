@@ -1,7 +1,11 @@
 {
+    "best": true,
     "name": {
         "en": "Off-Field DPS",
         "fr": "DPS Off-Field"
     },
-    "best": true
+    "global": {
+        "author": "Chiston",
+        "link": "https://drive.google.com/drive/folders/1eLRPofab9fJeAupIm5CbB9HjvESEE4c9"
+    }
 }
