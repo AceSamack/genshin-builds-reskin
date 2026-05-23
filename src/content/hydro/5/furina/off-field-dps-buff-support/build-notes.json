@@ -1,0 +1,23 @@
+{
+    "best": true,
+    "name": {
+        "en": "Off-Field DPS & Buff Support",
+        "fr": "DPS Off-Field & Support Buff"
+    },
+    "notes": [
+        {
+            "en": "[[character:furina]] buffs team members with her [[ability:burst]], and deals off-field damage with her [[ability:skill]].",
+            "fr": "[[character:furina]] buff son équipe grâce à son [[ability:burst]], et inflige des dégâts en étant off-field grâce à son [[ability:skill]]."
+        },
+        {
+            "en": "Because of her HP drain and [[ability:burst]] mechanics, [[character:furina]] encourages the use of teamwide healers.",
+            "fr": "A cause du drain de PV et de la mécanique de son [[ability:burst]], [[character:furina]] encourage l'utilisation de soins sur l'ensemble de l'équipe."
+        }
+    ],
+    "weapons": [
+        {
+            "author": "Chiston",
+            "link": "https://docs.google.com/spreadsheets/d/1dLh-5vJ-hZd8sLIpPm18U9QJqGztVe3yrH_zd9vNJww/edit?gid=848665920#gid=848665920"
+        }
+    ]
+}
