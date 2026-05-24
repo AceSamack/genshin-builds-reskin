@@ -1,0 +1,30 @@
+{
+    "weapons": [
+        {
+            "items": [
+                "favonius-greatsword"
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "sacrificial-greatsword",
+                    "note": {
+                        "en": "This weapon's passive allows [[character:dori]] to cast her [[ability:skill]] twice while only swapping to her once per rotation.",
+                        "fr": "Le passif de cette arme permet à [[character:dori]] d'utiliser son [[ability:skill]] deux fois tout en ne switchant sur elle qu'une seule fois par rotation."
+                    }
+                }
+            ]
+        },
+        {
+            "items": [
+                "katsuragikiri-nagamasa"
+            ]
+        },
+        {
+            "items": [
+                "forest-regalia"
+            ]
+        }
+    ]
+}
