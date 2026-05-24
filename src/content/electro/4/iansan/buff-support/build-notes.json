@@ -1,0 +1,33 @@
+{
+    "best": true,
+    "name": {
+        "en": "Buff Support",
+        "fr": "Support Buff"
+    },
+    "notes": [
+        {
+            "en": "[[character:iansan]]'s buff is based on 3 Factors:\n\n1. [[character:iansan]]'s Total ATK\n2. # of [[character:iansan]]'s [[ability:nightsoul-point]]\n3. \"Kinetic Energy Scale\"",
+            "fr": "Le buff de [[character:iansan]] repose sur 3 facteurs:\n\n1. L'ATQ totale de [[character:iansan]]\n2. Le nombre de [[ability:nightsoul-point]] de [[character:iansan]]\n3. La \"Jauge d'énergie cinétique\""
+        },
+        {
+            "en": "[[character:iansan]] can hold a max of 54 [[ability:nightsoul-point]], and her buff decreases in value when she's below 42 [[ability:nightsoul-point]]. Consistent movement is needed to maintain good buff uptime.",
+            "fr": "[[character:iansan]] peut accumuler un maximum de 54 [[ability:nightsoul-point]], et la valeur de son buff diminue lorsqu'elle passe sous les 42 [[ability:nightsoul-point]]. Des déplacements constants sont nécéssaires pour maintenir un bon uptime sur son buff."
+        },
+        {
+            "en": "[[character:iansan]]'s [C4] allows her to frontload [[ability:nightsoul-point]] if it had ever overflowed previously.",
+            "fr": "La [C4] de [[character:iansan]] lui permet de précharger des [[ability:nightsoul-point]] si la limite avait déjà été dépassée auparavant."
+        },
+        {
+            "en": "[[character:iansan]] buffs her teammates through her [[ability:burst]], as well as provide some additional healing for the active character through one of her passives. Characters with movement-based abilities will greatly contribute to [[character:iansan]]'s buff as [[character:iansan]]'s own movement cannot contribute to it. Movement is needed to help [[character:iansan]] maintain a high number of [[ability:nightsoul-point]], and the active character gaining and consuming [[ability:nightsoul-point]] can also contribute.",
+            "fr": "[[character:iansan]] buff son équipe avec son [[ability:burst]] et offre un peu de soin pour le personnage actif grâce à ses passifs. Les personnages avec des talents basés sur le mouvement contribueront beaucoup à charger son buff puisque ses propres mouvements ne comptent pas. Les mouvements sont nécéssaires pour aider [[character:iansan]] à maintenir un montant élevé de [[ability:nightsoul-point]], et le personnage actif gagnant et utilisant des [[ability:nightsoul-point]] peut aussi participer. can also contribute."
+        },
+        {
+            "en": "**Movement is defined as anything that moves the active character for any amount of distance, whether vertical or horizontal. This includes things such as attacks, [[ability:skill]] and [[ability:burst]] animations, jumping, etc. Almost any kind of movement will contribute, as long as it's not [[character:iansan]]'s own. This also extends to the gain and consumption of [[ability:nightsoul-point]]**.",
+            "fr": "**Les mouvements sont défini comme n'importe quelle action qui déplace le personnage d'actif d'une quelconque distance, que ce soit vertical ou horizontal. Cela inclut les attaques, les [[ability:skill]] et animations d'[[ability:burst]], les sauts etc. Presque tous les types de mouvements peuvent contribuer tant que ce ne sont pas des mouvements de [[character:iansan]]. Cela s'étend aussi au gain et à l'utilisation de [[ability:nightsoul-point]]**."
+        },
+        {
+            "en": "[[character:iansan]]'s [C1] gives her 15 Energy upon consuming 6 [[ability:nightsoul-point]] as long as she's in combat and in [[ability:nightsoul-blessing]] state, effectively changing her [[ability:burst]] cost from 70 to 55. This has a cooldown of 18 seconds.",
+            "fr": "La [C1] de [[character:iansan]] lui rend 15 énergie après avoir consommé 6 [[ability:nightsoul-point]] tant qu'elle est en combat et dans l'état [[ability:nightsoul-blessing]] state, changeant le coût de son [[ability:burst]] de 70 à 55. Ceci a un TdR de 18 secondes."
+        }
+    ]
+}

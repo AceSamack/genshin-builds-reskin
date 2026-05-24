@@ -1,0 +1,21 @@
+{
+    "main_stats": {
+        "sands": [
+            "atk%",
+            "er"
+        ],
+        "goblet": [
+            "atk%"
+        ],
+        "circlet": [
+            "atk%",
+            {
+                "name": "cr",
+                "note": {
+                    "en": "Only if using [[weapon:favonius-lance]]",
+                    "fr": "Seulement si vous jouez [[weapon:favonius-lance]]"
+                }
+            }
+        ]
+    }
+}
