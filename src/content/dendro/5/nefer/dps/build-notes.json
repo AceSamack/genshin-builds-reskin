@@ -1,0 +1,23 @@
+{
+    "name": {
+        "en": "DPS",
+        "fr": "DPS"
+    },
+    "best": true,
+    "notes": [
+        {
+            "en": "[[character:nefer]] is a [[element:lunar-bloom]] DPS that primarily deals damage through her **enhanced [[ability:ca]]s while in the Shadow Dance state**. [[character:nefer]]'s enhanced [[ability:ca]]s consume [[ability:verdant-dew]], and summon Shades that deal [[element:lunar-bloom]] Damage as coordinated attacks. [[character:nefer]] also converts [[element:bloom]] Cores into Seeds of Deceit, which enhances her [[ability:skill]] and [[ability:burst]] depending on how many she has consumed. The conversion requires Moonsign: Ascendant Gleam to be active.",
+            "fr": "[[character:nefer]] est une DPS [[element:lunar-bloom]] qui inflige ses dégâts principalement avec ses **[[ability:ca|attaques chargées]] renforcées pendant l'état Danse d'Ombre**. Les [[ability:ca|attaques chargées]] renforcées de [[character:nefer]] consomment de la [[ability:verdant-dew]] et invoquent des Ombres qui infligent des dégâts de [[element:lunar-bloom]] en attaques coordonnées. [[character:nefer]] convertit aussi les noyaux de [[element:bloom]] en Graines de Tromperie, ce qui renforce son [[ability:skill]] et son [[ability:burst]] selon la quantité qu'elle a consommé. La conversion nécessite que le Signelune: Lueur Ascendante soit actif."
+        },
+        {
+            "en": "Seeds of Deceit do not deal damage, and they cannot enable [[element:hyperbloom]] or [[element:burgeon]]. They are strictly to enhance [[character:nefer]]'s [[ability:burst]] and add Lunar% buffs to her [[ability:skill]].",
+            "fr": "Les Graines de Tromperie n'infligent pas de dégâts et ne peuvent pas permettre de déclencher [[element:hyperbloom]] ou [[element:burgeon]]. Elles servent uniquement à renforcer l'[[ability:burst]] de [[character:nefer]] et à ajouter des buffs Lunar% à son [[ability:skill]]."
+        }
+    ],
+    "weapons": [
+        {
+            "author": "Chiston",
+            "link": "https://docs.google.com/spreadsheets/d/17xANaGOri14O2A9qoBzqh9nAhG6_2zmBBwNAE833m-g/edit?gid=848665920#gid=848665920"
+        }
+    ]
+}
