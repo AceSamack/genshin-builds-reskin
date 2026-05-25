@@ -1,0 +1,24 @@
+{
+    "notes": [
+        {
+            "en": "**Not priority investment**",
+            "fr": "**Il n'est pas nécéssaire d'investir dans les talents**"
+        }
+    ],
+    "talents": [
+        {
+            "items": [
+                {
+                    "name": "burst"
+                }
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "skill"
+                }
+            ]
+        }
+    ]
+}

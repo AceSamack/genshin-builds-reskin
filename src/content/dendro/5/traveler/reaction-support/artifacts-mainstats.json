@@ -1,0 +1,24 @@
+{
+    "notes": [
+        {
+            "en": "Prioritize maintaining their [[ability:burst]] uptime, the [[stat:er]] needs for [[element:dendro]] [[character:traveler]] would be a lot greater if they are the only [[element:dendro]] unit in the team.",
+            "fr": "Priorisez le maintien de l'uptime de son [[ability:burst]]. Les besoins en [[stat:er]] du [[character:traveler]] [[element:dendro]] seront bien plus élevés s'il est le seul personnage [[element:dendro]] dans l'équipe."
+        }
+    ],
+    "main_stats": {
+        "sands": [
+            "er",
+            "atk%",
+            "em"
+        ],
+        "goblet": [
+            "dendro-dmg",
+            "em"
+        ],
+        "circlet": [
+            "cr",
+            "cd",
+            "em"
+        ]
+    }
+}
