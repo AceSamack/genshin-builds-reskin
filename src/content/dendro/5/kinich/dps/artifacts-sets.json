@@ -1,0 +1,79 @@
+{
+    "artifact_sets": [
+        {
+            "groups": [
+                {
+                    "items": [
+                        {
+                            "name": "obsidian-codex",
+                            "pieces": 4,
+                            "note": {
+                                "en": "This set is about equal to **[[set:unfinished-reverie]] (4)**. The more DMG% [[character:kinich]] already has, the better this set performs.",
+                                "fr": "Ce set est à peu près équivalent à **[[set:unfinished-reverie]] (4)**. Plus [[character:kinich]] a déjà de DGT%, plus **[[set:obsidian-codex]] (4)** devient meilleur."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "name": "unfinished-reverie",
+                            "pieces": 4,
+                            "note": {
+                                "en": "This set is about equal to **[[set:obsidian-codex]] (4)**.  The less DMG% [[character:kinich]] has from his weapon and/or team, the better this set performs. ",
+                                "fr": "Ce set est à peu près équivalent à **[[set:obsidian-codex]] (4)**. Moins [[character:kinich]] a de DGT% via son arme et/ou son équipe, plus **[[set:unfinished-reverie]] (4)** devient performant."
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "groups": [
+                {
+                    "items": [
+                        {
+                            "name": "golden-troupe",
+                            "pieces": 4
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "groups": [
+                {
+                    "choose": true,
+                    "items": [
+                        {
+                            "name": "deepwood-memories",
+                            "pieces": 2
+                        },
+                        {
+                            "name": "atk-set",
+                            "pieces": 2
+                        },
+                        {
+                            "name": "golden-troupe",
+                            "pieces": 2
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "conditional": [
+        {
+            "items": [
+                {
+                    "name": "marechaussee-hunter",
+                    "pieces": 4,
+                    "note": {
+                        "en": "Only to be used when paired with [[character:furina]], or when played in [[element:burgeon]]. Performs similarly to **[[set:unfinished-reverie]] (4)**.",
+                        "fr": "À utiliser uniquement avec [[character:furina]], ou lorsque [[character:kinich]] est joué en [[element:burgeon]]. Ses performances sont proches de **[[set:unfinished-reverie]] (4)**."
+                    }
+                }
+            ]
+        }
+    ]
+}

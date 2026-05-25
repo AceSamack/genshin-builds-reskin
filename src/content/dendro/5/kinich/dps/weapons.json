@@ -1,0 +1,58 @@
+{
+    "notes": [
+        {
+            "en": "Rankings assume [[character:kinich]] is used with [[character:bennett]].",
+            "fr": "Le classement suppose que [[character:kinich]] est joué avec [[character:bennett]]."
+        }
+    ],
+    "weapons": [
+        {
+            "items": [
+                "fang-of-the-mountain-king"
+            ]
+        },
+        {
+            "items": [
+                "gest-of-the-mighty-wolf",
+                "a-thousand-blazing-suns",
+                "beacon-of-the-reed-sea"
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "serpent-spine",
+                    "note": {
+                        "en": "Performs much worse without a shielder. At **[R5]**, this weapon performs better than **[[weapon:beacon-of-the-reed-sea]]**.",
+                        "fr": "Elle est nettement moins bonne sans bouclier. Une fois **[R5]**, cette arme dépasse **[[weapon:beacon-of-the-reed-sea]]**."
+                    }
+                }
+            ]
+        },
+        {
+            "items": [
+                "verdict"
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "earth-shaker",
+                    "refinement": 5,
+                    "note": {
+                        "en": "**[[weapon:earth-shaker]]** is an inconsistent weapon choice in teams only consisting of [[element:dendro]] and [[element:pyro]] characters. Since only the activation of [[element:burning]] counts toward the passive, meaning that the passive activation can only trigger once per enemy.",
+                        "fr": "**[[weapon:earth-shaker]]** est un choix d'arme inconsistant dans les équipes composées uniquement de personnages [[element:dendro]] et [[element:pyro]]. Comme seule l'activation de [[element:burning]] compte pour le passif, cela signifie que le passif ne peut s'activer qu'une fois par ennemi."
+                    }
+                },
+                {
+                    "name": "wolfs-gravestone",
+                    "note": {
+                        "en": "This option is mainly just a statstick for [[character:kinich]] as many of his teammates, barring [[character:xiangling]], [[character:emilie]], [[character:mavuika]], or [[character:xingqiu]], don't benefit much from the [[stat:atk%]] buff from the passive.",
+                        "fr": "Cette option sert principalement de stat stick pour [[character:kinich]], car beaucoup de ses coéquipiers, à part [[character:xiangling]], [[character:emilie]], [[character:mavuika]] ou [[character:xingqiu]], ne profitent pas beaucoup du buff d'[[stat:atk%]] du passif."
+                    }
+                },
+                "redhorn-stonethresher"
+            ]
+        }
+    ]
+}
