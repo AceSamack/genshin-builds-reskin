@@ -1,0 +1,96 @@
+{
+    "artifact_sets": [
+        {
+            "groups": [
+                {
+                    "items": [
+                        {
+                            "name": "pale-flame",
+                            "pieces": 4
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "groups": [
+                {
+                    "items": [
+                        {
+                            "name": "pale-flame",
+                            "pieces": 2
+                        },
+                        {
+                            "name": "emblem-of-severed-fate",
+                            "pieces": 2
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "name": "physical-set",
+                            "pieces": 2
+                        }
+                    ],
+                    "choices": [
+                        {
+                            "items": [
+                                {
+                                    "name": "physical-set",
+                                    "pieces": 2
+                                },
+                                {
+                                    "name": "golden-troupe",
+                                    "pieces": 2
+                                },
+                                {
+                                    "name": "atk-set",
+                                    "pieces": 2
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "groups": [
+                {
+                    "items": [
+                        {
+                            "name": "golden-troupe",
+                            "pieces": 4
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "groups": [
+                {
+                    "items": [
+                        {
+                            "name": "gladiators-finale",
+                            "pieces": 4
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "conditional": [
+        {
+            "items": [
+                {
+                    "name": "marechaussee-hunter",
+                    "pieces": 4,
+                    "note": {
+                        "en": "If used with [[character:furina]], this is [[character:freminet]]'s best artifact set.",
+                        "fr": "S'il est utilisé avec [[character:furina]], c'est le meilleur set d'artéfacts de [[character:freminet]]."
+                    }
+                }
+            ]
+        }
+    ]
+}

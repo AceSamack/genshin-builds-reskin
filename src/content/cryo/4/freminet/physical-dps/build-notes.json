@@ -1,0 +1,21 @@
+{
+    "name": {
+        "en": "Physical DPS",
+        "fr": "DPS Physique"
+    },
+    "best": true,
+    "notes": [
+        {
+            "en": "Physical DPS [[character:freminet]] stacks his Pers Timer to max using [[ability:na]]s and unleashes a powerful Physical Shattering Pressure. Rankings assume he is in a team that can reliably trigger Shatter and [[element:superconduct]].",
+            "fr": "[[character:freminet]] DPS Physique remplit son Indicateur de Pers avec ses [[ability:na]]s et libère un Concassage Pressurisé physique (niveau 4). Les classements supposent qu'il est dans une équipe capable de déclencher Brise-Glace et [[element:superconduct]] de manière fiable."
+        },
+        {
+            "en": "Rotation: {rot:E Q N2 E 3[N1 E N2 (E or NA)]}",
+            "fr": "Rotation : {rot:E A N2 E 3[N1 E N2 (E or NA)]}"
+        },
+        {
+            "en": "You can perform a [[ability:na]] instead of using [[ability:skill]] at Pressure Level 4, because this also ends the Pers Timer state.",
+            "fr": "Vous pouvez effectuer une [[ability:na]] au lieu d'utiliser le [[ability:skill]] au niveau de pression 4, parce que cela met aussi fin à l'état Indicateur de Pers."
+        }
+    ]
+}

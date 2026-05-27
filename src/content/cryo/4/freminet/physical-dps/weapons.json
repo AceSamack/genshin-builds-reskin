@@ -1,0 +1,55 @@
+{
+    "weapons": [
+        {
+            "items": [
+                {
+                    "name": "skyward-pride",
+                    "note": {
+                        "en": "If [[character:freminet]] is C2 or has low [[stat:er]] Requirements this weapon is less potent due to the [[stat:er]] stat being less useful.",
+                        "fr": "Si [[character:freminet]] est C2 ou a de faibles besoins en [[stat:er]], cette arme perd en puissance puisque la stat de [[stat:er]] devient moins utile."
+                    }
+                },
+                "fang-of-the-mountain-king",
+                "a-thousand-blazing-suns"
+            ]
+        },
+        {
+            "items": [
+                "song-of-broken-pines",
+                "verdict",
+                "wolfs-gravestone"
+            ]
+        },
+        {
+            "items": [
+                "beacon-of-the-reed-sea",
+                "redhorn-stonethresher"
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "serpent-spine",
+                    "note": {
+                        "en": "At [R5] this weapon can equal **[[weapon:skyward-pride]]**.",
+                        "fr": "À [R5], cette arme peut égaler **[[weapon:skyward-pride]]**."
+                    }
+                },
+                "the-unforged"
+            ]
+        },
+        {
+            "items": [
+                "prototype-archaic",
+                {
+                    "name": "tidal-shadow",
+                    "note": {
+                        "en": "The performance of this weapon depends on the healing abilities of your team. If your team has healing capabilities, this weapon can be equal to **[[weapon:redhorn-stonethresher]]** or better depending on refinement.",
+                        "fr": "Les performances de cette arme dépendent des capacités de soin de votre équipe. Si votre équipe peut soigner, cette arme peut égaler **[[weapon:redhorn-stonethresher]]**, voire le dépasser selon le raffinement."
+                    }
+                },
+                "snow-tombed-starsilver"
+            ]
+        }
+    ]
+}
