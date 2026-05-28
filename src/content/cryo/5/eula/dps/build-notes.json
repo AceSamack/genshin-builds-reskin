@@ -1,0 +1,25 @@
+{
+    "name": {
+        "en": "DPS",
+        "fr": "DPS"
+    },
+    "best": true,
+    "notes": [
+        {
+            "en": "[[character:eula]] is an on-field [[stat:physical-dmg]] dealer who deals a significant portion of her damage through her [[ability:burst]]. Her [[ability:na]]s also make up a large portion of her overall damage at low Constellation. Weapon rankings are assuming 130% [[stat:er]] minimum, [[element:superconduct]] and 4pc **[[set:noblesse-oblige]]** buff, otherwise no buffs.",
+            "fr": "[[character:eula]] est un DPS [[stat:physical-dmg]] on-field qui inflige une grande partie de ses dégâts grâce à son [[ability:burst]]. Ses [[ability:na]]s représentent aussi une grande partie de ses dégâts globaux lorsqu'elle a peu de Constellations. Les classements d'armes supposent un minimum de 130 % de [[stat:er]], [[element:superconduct]] et le buff 4p de **[[set:noblesse-oblige]]**, sans autre buff."
+        },
+        {
+            "en": "Normal combo while no [[ability:burst]]: {rot:N Spam > tE > N Spam > tE}",
+            "fr": "Combo normal sans [[ability:burst]] : {rot:N Spam > tE > N Spam > tE}"
+        },
+        {
+            "en": "[[ability:burst]] combo: {rot:tE Q N4 hE N4}",
+            "fr": "Combo de [[ability:burst]] : {rot:tE A N4 hE N4}"
+        },
+        {
+            "en": "[[ability:burst]] combo that generates more energy at the cost of slightly less DPS: {rot:tE Q tE N4 D N2 hE N2}",
+            "fr": "Combo de [[ability:burst]] qui génère plus d'énergie au prix d'un DPS légèrement inférieur : {rot:tE A tE N4 D N2 hE N2}"
+        }
+    ]
+}

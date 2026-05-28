@@ -1,0 +1,127 @@
+{
+    "notes": [
+        {
+            "en": "Regarding weapons which provide [[stat:er]]: In teams with low ER requirements on [[character:eula]] (such as Triple [[element:cryo]] + [[character:shogun-raiden|Raiden]]) these weapons lose some effectiveness.",
+            "fr": "Concernant les armes qui apportent de la [[stat:er]] : dans les équipes où [[character:eula]] a de faibles besoins en [[stat:er]] (comme Triple [[element:cryo]] + [[character:shogun-raiden]]), ces armes perdent en efficacité."
+        }
+    ],
+    "weapons": [
+        {
+            "items": [
+                "song-of-broken-pines"
+            ]
+        },
+        {
+            "items": [
+                "wolfs-gravestone",
+                {
+                    "name": "beacon-of-the-reed-sea",
+                    "note": {
+                        "en": "Assumes one stack. At two stacks, it outperforms other weapon options.",
+                        "fr": "Suppose 1 stack. Avec deux stacks, elle depasse les autres options d'armes."
+                    }
+                }
+            ]
+        },
+        {
+            "items": [
+                "skyward-pride",
+                {
+                    "name": "verdict",
+                    "note": {
+                        "en": "Weapon rankings are assuming no [[element:crystallize]].",
+                        "fr": "Le classement de cette arme suppose l'absence de [[element:crystallize]]."
+                    }
+                }
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "the-unforged",
+                    "note": {
+                        "en": "Weapon rankings are assuming no shield. With a shield this weapon performs similarly to **[[weapon:beacon-of-the-reed-sea]]** and **[[weapon:wolfs-gravestone]]**.",
+                        "fr": "Le classement de cette arme suppose l'absence de bouclier. Avec un bouclier, cette arme est comparable à **[[weapon:beacon-of-the-reed-sea]]** et **[[weapon:wolfs-gravestone]]**."
+                    }
+                }
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "redhorn-stonethresher",
+                    "note": {
+                        "en": "This weapon can overtake **[[weapon:wolfs-gravestone]]** in terms of [[character:eula]]'s own damage if team provides enough ATK buffs, but **[[weapon:wolfs-gravestone]]** can make up the damage difference by buffing team damage.",
+                        "fr": "Cette arme peut dépasser **[[weapon:wolfs-gravestone]]** en termes de dégâts personnels de [[character:eula]] si l'équipe apporte assez de buffs d'ATQ, mais **[[weapon:wolfs-gravestone]]** peut compenser l'écart en buffant les dégâts de l'équipe."
+                    }
+                }
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "serpent-spine",
+                    "note": {
+                        "en": "Weapon rankings are assuming max stacks, in practice this often means running a shielder. At [R5] this weapon performs similarly to **[[weapon:beacon-of-the-reed-sea]]**.",
+                        "fr": "Suppose le nombre maximum de stacks, ce qui signifie souvent en pratique jouer un shielder. Une fois [R5], cette arme se rapproche de **[[weapon:beacon-of-the-reed-sea]]**."
+                    }
+                },
+                {
+                    "name": "ultimate-overlords-mega-magic-sword",
+                    "refinement": 5
+                }
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "luxurious-sea-lord",
+                    "refinement": 5
+                },
+                {
+                    "name": "akuoumaru",
+                    "note": {
+                        "en": "This weapon will outperform **[[weapon:luxurious-sea-lord]]** at higher refinements. At [R5] it can perform similarly to **[[weapon:verdict]]** and **[[weapon:skyward-pride]]**.",
+                        "fr": "Cette arme dépassera **[[weapon:luxurious-sea-lord]]** aux raffinements élevés. Une fois [R5], elle peut équivaloir à **[[weapon:verdict]]** et **[[weapon:skyward-pride]]**."
+                    }
+                },
+                {
+                    "name": "tidal-shadow",
+                    "note": {
+                        "en": "Weapon rankings are assuming the passive is active. At [R5] this weapon performs similarly to **[[weapon:serpent-spine]] [R1]** at 5 stacks.",
+                        "fr": "Suppose que le passif est actif. Une fois [R5], cette arme est comparable à **[[weapon:serpent-spine]] [R1]** à 5 stacks."
+                    }
+                }
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "lithic-blade",
+                    "note": {
+                        "en": "Assumes 1 stack.",
+                        "fr": "Suppose 1 stack."
+                    }
+                }
+            ]
+        },
+        {
+            "items": [
+                "prototype-archaic"
+            ]
+        },
+        {
+            "items": [
+                "snow-tombed-starsilver"
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "skyrider-greatsword",
+                    "refinement": 5
+                }
+            ]
+        }
+    ]
+}
