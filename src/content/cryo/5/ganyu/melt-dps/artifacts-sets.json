@@ -1,0 +1,71 @@
+{
+    "artifact_sets": [
+        {
+            "groups": [
+                {
+                    "items": [
+                        {
+                            "name": "wanderers-troupe",
+                            "pieces": 4
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "groups": [
+                {
+                    "items": [
+                        {
+                            "name": "shimenawas-reminiscence",
+                            "pieces": 4,
+                            "note": {
+                                "en": "If you are able to squeeze 5 [[ability:ca]]s during the 10 second buff duration, **[[set:shimenawas-reminiscence]] (4)** pulls ahead of **[[set:wanderers-troupe]] (4)**. Due to it being very difficult to do, **[[set:wanderers-troupe]] (4)** will usually end up dealing more damage for most players.",
+                                "fr": "Si vous pouvez placer 5 [[ability:ca]]s pendant les 10 secondes de durée du buff, **[[set:shimenawas-reminiscence]] (4)** passe devant **[[set:wanderers-troupe]] (4)**. Comme c'est très difficile à faire, **[[set:wanderers-troupe]] (4)** finira généralement par infliger plus de dégâts pour la plupart des joueurs."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "name": "gilded-dreams",
+                            "pieces": 4
+                        }
+                    ]
+                },
+                {
+                    "choose": true,
+                    "items": [
+                        {
+                            "name": "blizzard-strayer",
+                            "pieces": 2
+                        },
+                        {
+                            "name": "atk-set",
+                            "pieces": 2
+                        },
+                        {
+                            "name": "em-set",
+                            "pieces": 2
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "conditional": [
+        {
+            "items": [
+                {
+                    "name": "unfinished-reverie",
+                    "pieces": 4,
+                    "note": {
+                        "en": "If [[character:ganyu]] is played in a team with consistent [[element:burning]] uptime, this set performs better than **[[set:wanderers-troupe]] (4)** and **[[set:shimenawas-reminiscence]] (4)**.",
+                        "fr": "Si [[character:ganyu]] est jouée dans une équipe avec un uptime constant de [[element:burning]], ce set dépasse **[[set:wanderers-troupe]] (4)** et **[[set:shimenawas-reminiscence]] (4)**."
+                    }
+                }
+            ]
+        }
+    ]
+}

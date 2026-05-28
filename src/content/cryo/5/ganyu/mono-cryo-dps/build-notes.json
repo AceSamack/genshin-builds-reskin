@@ -1,0 +1,17 @@
+{
+    "name": {
+        "en": "Mono [[element:cryo]] DPS",
+        "fr": "DPS Mono [[element:cryo]]"
+    },
+    "best": true,
+    "notes": [
+        {
+            "en": "Mono [[element:cryo]] [[character:ganyu]] teams utilize **[[set:blizzard-strayer]] (4)** and [[element:cryo]] Resonance while having [[character:ganyu]] on field dealing damage through both her [[ability:ca]]s and [[ability:burst]].",
+            "fr": "Les équipes Mono [[element:cryo]] de [[character:ganyu]] utilisent **[[set:blizzard-strayer]] (4)** et la résonance [[element:cryo]], tout en gardant [[character:ganyu]] on-field pour infliger des dégâts avec ses [[ability:ca]]s et son [[ability:burst]]."
+        },
+        {
+            "en": "When using **[[set:blizzard-strayer]] (4)**, [[character:ganyu]] reaches max [[stat:cr]] with a base of 45% on her [[ability:ca]]s and a base of 65% on her [[ability:burst]]. Anything between 45% and 55% [[stat:cr]] is a nice point to be at without sacrificing too much damage on either end.",
+            "fr": "Avec **[[set:blizzard-strayer]] (4)**, [[character:ganyu]] atteint le [[stat:cr]] maximal avec une base de 45% sur ses attaques chargées et une base de 65% sur son [[ability:burst]]. Entre 45% et 55% de [[stat:cr]] est un bon point d'équilibre sans trop sacrifier de dégâts d'un côté ou de l'autre."
+        }
+    ]
+}
