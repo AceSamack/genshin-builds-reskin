@@ -1,0 +1,86 @@
+{
+    "artifact_sets": [
+        {
+            "groups": [
+                {
+                    "items": [
+                        {
+                            "name": "marechaussee-hunter",
+                            "pieces": 4,
+                            "note": {
+                                "en": "This set pulls ahead of **[[set:vermillion-hereafter]]** (4) with either [[character:bennett]] or [[character:xianyun]] on the Team. This set is hard to build around when using a [[stat:cr]] Weapon, making other sets a better overall choice.",
+                                "fr": "Ce set dépasse **[[set:vermillion-hereafter]]** (4) avec [[character:bennett]] ou [[character:xianyun]] dans l'équipe. Ce set est difficile à build avec une arme [[stat:cr]], ce qui fait des autres sets un meilleur choix global."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "name": "vermillion-hereafter",
+                            "pieces": 4
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "name": "long-nights-oath",
+                            "pieces": 4,
+                            "note": {
+                                "en": "While being a strong alternative to similar ranking sets, it is not recommended to farm this set currently as it combines an inefficient domain with a team- and skill- dependent damage performance.",
+                                "fr": "Bien qu'il soit une solide alternative aux sets au classement similaire, il n'est actuellement pas recommandé de farm ce set car il combine un domaine inefficace avec des performances de dégâts dépendantes de l'équipe et des compétences."
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "groups": [
+                {
+                    "items": [
+                        {
+                            "name": "desert-pavilion-chronicle",
+                            "pieces": 4,
+                            "note": {
+                                "en": "Perform a [[ability:ca]] at the start of [[character:xiao]]'s [[ability:burst]] to utilize this set fully. With a low base attack weapon and [[character:bennett]] on the team, this set performs close to **[[set:vermillion-hereafter]]** (4). It is not recommended to farm this Domain specifically for [[character:xiao]].",
+                                "fr": "Effectuez une [[ability:ca]] au début de l'[[ability:burst]] de [[character:xiao]] pour utiliser pleinement ce set. Avec une arme à faible attaque de base et [[character:bennett]] dans l'équipe, ce set se rapproche de **[[set:vermillion-hereafter]]** (4). Il n'est pas recommandé de farm ce domaine spécifiquement pour [[character:xiao]]."
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "groups": [
+                {
+                    "items": [
+                        {
+                            "name": "long-nights-oath",
+                            "pieces": 2
+                        }
+                    ],
+                    "choices": [
+                        {
+                            "items": [
+                                {
+                                    "name": "anemo-set",
+                                    "pieces": 2
+                                },
+                                {
+                                    "name": "atk-set",
+                                    "pieces": 2
+                                },
+                                {
+                                    "name": "emblem-of-severed-fate",
+                                    "pieces": 2
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
