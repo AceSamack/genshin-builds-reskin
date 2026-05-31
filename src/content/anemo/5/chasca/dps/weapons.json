@@ -1,0 +1,88 @@
+{
+    "weapons": [
+        {
+            "items": [
+                "astral-vultures-crimson-plumage"
+            ]
+        },
+        {
+            "items": [
+                "aqua-simulacra",
+                "the-first-great-magic"
+            ]
+        },
+        {
+            "items": [
+                "thundering-pulse"
+            ]
+        },
+        {
+            "items": [
+                "skyward-harp"
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "amos-bow",
+                    "note": {
+                        "en": "As [[character:chasca]]'s Shining Shadowhunt Shells are not a projectile and therefore have no travel time, she does not benefit from any stacks of this weapon's passive. It is still a good Stat stick nonetheless.",
+                        "fr": "Comme les Cartouches Radieuses de Chassombre de [[character:chasca]] ne sont pas des projectiles et n'ont donc pas de temps de trajet, elle ne bénéficie d'aucun stack du passif de cette arme. Cela reste néanmoins un bon stat stick."
+                    }
+                },
+                {
+                    "name": "polar-star",
+                    "note": {
+                        "en": "In theory, this weapon performs slightly better than **[[weapon:amos-bow]]**. However, due to its high [[stat:cr]] substat, optimizing builds around this weapon is very hard.",
+                        "fr": "En théorie, cette arme dépasse légèrement **[[weapon:amos-bow]]**. Cependant, à cause de sa substat [[stat:cr]] élevée, optimiser les builds autour de cette arme est très difficile."
+                    }
+                },
+                {
+                    "name": "scion-of-the-blazing-sun",
+                    "note": {
+                        "en": "At [R5], this weapon performs close to **[[weapon:skyward-harp]]**.",
+                        "fr": "Une fois [R5], cette arme se rapproche de **[[weapon:skyward-harp]]**."
+                    }
+                }
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "chain-breaker",
+                    "refinement": 5
+                },
+                {
+                    "name": "song-of-stillness",
+                    "refinement": 5,
+                    "note": {
+                        "en": "Assumes permanent uptime on the passive. If the team cannot provide frequent heals, this weapon should not be considered.",
+                        "fr": "Suppose une disponibilité permanente du passif. Si l'équipe ne peut pas fournir des soins fréquents, cette arme ne devrait pas être envisagée."
+                    }
+                },
+                {
+                    "name": "flower-wreathed-feathers",
+                    "note": {
+                        "en": "At [R5], this weapon performs similarly to **[[weapon:skyward-harp]]**.",
+                        "fr": "Une fois [R5], cette arme équivaut presque à **[[weapon:skyward-harp]]**."
+                    }
+                },
+                {
+                    "name": "hamayumi",
+                    "refinement": 5
+                }
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "range-gauge",
+                    "note": {
+                        "en": "This weapon needs reliable healing to perform well. With frequent, guaranteed healing instances, this weapon performs slightly better than **[[weapon:song-of-stillness]] [R5]**, and slightly better than **[[weapon:amos-bow]]** at [R5].",
+                        "fr": "Cette arme a besoin de soins fiables pour être performante. Avec des soins fréquents et garantis, cette arme dépasse légèrement **[[weapon:song-of-stillness]] [R5]**, et dépasse légèrement **[[weapon:amos-bow]]** une fois [R5]."
+                    }
+                }
+            ]
+        }
+    ]
+}
