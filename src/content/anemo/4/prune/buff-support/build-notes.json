@@ -1,0 +1,29 @@
+{
+    "best": true,
+    "name": {
+        "en": "Buff Support",
+        "fr": "Support Buff"
+    },
+    "notes": [
+        {
+            "en": "[[character:prune]] is a support that relies on triggering the [[element:swirl]] reaction to buff characters. Triggering [[element:swirl]] will convert her Banehunter Oathhammer ([[ability:skill]]) into the element she Swirls, and as long as her A4 talent is unlocked, hitting opponents with a converted Banehunter Oathhammer or her [[ability:burst]] will activate the Tolling Rally effect, which will provide DMG buffs to the team based on [[character:prune]]'s [[stat:atk|ATK]]. In addition, when a [[ability:hexerei]] character under Tolling Rally triggers a reaction, [[character:prune]] gains an [[stat:atk%]] boost, and if that reaction was [[element:swirl]], the triggering character also gains an [[stat:atk%]] boost.",
+            "fr": "[[character:prune]] est un support qui repose sur le déclenchement de la réaction de [[element:swirl]] pour buff les personnages. Déclencher [[element:swirl]] convertit son Marteau-serment de chasse des fléaux ([[ability:skill]]) dans l'élément dispersé, et tant que son passif A4 est débloqué, toucher des ennemis avec un Marteau-serment de chasse des fléaux converti ou son [[ability:burst]] activera l'effet Ralliement du glas, ce qui accordera des buffs de DGT à l'équipe selon l'[[stat:atk]] de [[character:prune]]. De plus, lorsqu'un personnage [[ability:hexerei]] sous Ralliement du glas déclenche une réaction, [[character:prune]] gagne un bonus d'[[stat:atk%]], et si cette réaction était [[element:swirl]], le personnage qui l'a déclenchée gagne aussi un bonus d'[[stat:atk%]]."
+        },
+        {
+            "en": "[[character:prune]]'s [C1] let's her restore 2 Energy every 1.8 seconds whenever a converted Banehunter Oathhammer hits opponents. How much total energy she can restore depends how often [[character:prune]] is able to trigger [[element:swirl]] during the duration of her [[ability:burst]]. [[character:prune]]'s [C6] increases her [[ability:burst]] duration by 4 seconds.",
+            "fr": "La [C1] de [[character:prune]] lui permet de restaurer 2 points d'énergie toutes les 1,8 s chaque fois qu'un Marteau-serment de chasse des fléaux converti touche des ennemis. La quantité totale d'énergie qu'elle peut restaurer dépend de la fréquence à laquelle [[character:prune]] peut déclencher [[element:swirl]] pendant la durée de son [[ability:burst]]. La [C6] de [[character:prune]] augmente la durée de son [[ability:burst]] de 4 s."
+        },
+        {
+            "en": "Tolling Rally does not apply to [[character:prune]] herself.",
+            "fr": "Ralliement du glas ne s'applique pas à [[character:prune]] elle-même."
+        },
+        {
+            "en": "Tolling Rally caps out at 4,000 [[stat:atk|ATK]], usually not feasible to get unless [[character:prune]] is in a [[ability:hexerei]] team.",
+            "fr": "Ralliement du glas atteint son maximum à 4 000 d'[[stat:atk]], ce qui n'est généralement pas faisable sauf si [[character:prune]] est dans une équipe [[ability:hexerei]]."
+        },
+        {
+            "en": "Talent levels are not a necessity as they do not increase [[character:prune]]'s buffing capabilities.",
+            "fr": "Monter ses aptitudes n'est pas une nécessité, car cela n'augmente pas les capacités de buff de [[character:prune]]."
+        }
+    ]
+}

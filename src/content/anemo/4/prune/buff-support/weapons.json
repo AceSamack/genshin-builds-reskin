@@ -1,0 +1,52 @@
+{
+    "weapons": [
+        {
+            "items": [
+                {
+                    "name": "favonius-codex",
+                    "note": {
+                        "en": "In teams where Energy isn't much of an issue for [[character:prune]] or the team, it is better to use a weapon that provides more [[stat:atk|ATK]].",
+                        "fr": "Dans les équipes où l'énergie n'est pas vraiment un problème pour [[character:prune]] ou l'équipe, il vaut mieux utiliser une arme qui apporte plus d'[[stat:atk]]."
+                    }
+                }
+            ]
+        },
+        {
+            "items": [
+                "angelos-heptades",
+                "cranes-echoing-call"
+            ]
+        },
+        {
+            "items": [
+                "skyward-atlas",
+                "memory-of-dust"
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "oathsworn-eye",
+                    "refinement": 5
+                }
+            ]
+        },
+        {
+            "items": [
+                "flowing-purity"
+            ]
+        },
+        {
+            "items": [
+                {
+                    "name": "thrilling-tales-of-dragon-slayers",
+                    "refinement": 5,
+                    "note": {
+                        "en": "While this weapon significantly decreases the value of [[character:prune]]'s buff due to its low Base Attack, it can provide a 48% [[stat:atk|ATK]] boost to the DPS, which can be valuable depending on the team she is in.",
+                        "fr": "Bien que cette arme réduise considérablement la valeur du buff de [[character:prune]] à cause de sa faible attaque de base, elle peut offrir un bonus d'[[stat:atk]] de 48 % au DPS, ce qui peut être précieux selon l'équipe dans laquelle elle est jouée."
+                    }
+                }
+            ]
+        }
+    ]
+}
