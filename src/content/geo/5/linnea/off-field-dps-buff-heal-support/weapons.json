@@ -9,7 +9,7 @@
             "items": [
                 {
                     "name": "elegy-for-the-end",
-                    "notes": {
+                    "note": {
                         "en": "This weapon is not worth considering outside of [[character:zibai]] teams.",
                         "fr": "Cette arme ne vaut pas le coup d'être considérée en dehors des équipes de [[character:zibai]]."
                     }
