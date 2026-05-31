@@ -1,0 +1,29 @@
+{
+    "name": {
+        "en": "Off-Field Reaction DPS & Heal Support",
+        "fr": "DPS Réaction off-field & Support Soins"
+    },
+    "best": true,
+    "notes": [
+        {
+            "en": "[[character:jahoda]] offers continuous healing for the active character with her [[ability:burst]], and Off-Field Elemental Application with her infused [[ability:skill]] and [[ability:burst]]. While Ascendant Gleam is active, her [[ability:skill]] can steal enemy auras and use it for herself.",
+            "fr": "[[character:jahoda]] offre un soin continu au personnage actif avec son [[ability:burst]], ainsi qu'une application élémentaire off-field avec son [[ability:skill]] et son [[ability:burst]] infusés. Tant que Lueur ascendante est active, son [[ability:skill]] peut voler les auras ennemies et les utiliser pour elle-même."
+        },
+        {
+            "en": "[[character:jahoda]] heavily favors having Moonsign: Ascendant Gleam.",
+            "fr": "[[character:jahoda]] préfère fortement avoir le Signe lunaire : Lueur ascendante."
+        },
+        {
+            "en": "Her [[ability:skill]] and [[ability:burst]] Infusion priority is [[element:pyro]]>[[element:hydro]]>[[element:electro]]>[[element:cryo]].",
+            "fr": "La priorité d'infusion de son [[ability:skill]] et de son [[ability:burst]] est [[element:pyro]] > [[element:hydro]] > [[element:electro]] > [[element:cryo]]."
+        },
+        {
+            "en": "If the active character has 70% HP or more, [[character:jahoda]]'s [[ability:burst]] will also heal the character with the lowest HP.",
+            "fr": "Si le personnage actif a 70 % de PV ou plus, l'[[ability:burst]] de [[character:jahoda]] soignera aussi le personnage avec le moins de PV."
+        },
+        {
+            "en": "[[character:jahoda]]'s [C6] will only take effect if the Purr-Loined Treasure Flask is full.",
+            "fr": "La [C6] de [[character:jahoda]] ne prendra effet que si le Flacon au trésor chapardé est plein."
+        }
+    ]
+}
