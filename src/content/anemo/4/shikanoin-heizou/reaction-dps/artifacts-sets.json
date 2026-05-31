@@ -1,0 +1,32 @@
+{
+    "artifact_sets": [
+        {
+            "groups": [
+                {
+                    "items": [
+                        {
+                            "name": "viridescent-venerer",
+                            "pieces": 4
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "groups": [
+                {
+                    "items": [
+                        {
+                            "name": "noblesse-oblige",
+                            "pieces": 4,
+                            "note": {
+                                "en": "Only use this set if you already have a **[[set:viridescent-venerer]] (4)** user on your team",
+                                "fr": "Utilisez ce set uniquement si vous avez déjà un utilisateur de **[[set:viridescent-venerer]] (4)** dans votre équipe"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

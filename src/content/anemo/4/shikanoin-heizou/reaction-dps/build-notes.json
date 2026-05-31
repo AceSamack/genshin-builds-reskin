@@ -1,0 +1,19 @@
+{
+    "name": {
+        "en": "Reaction DPS",
+        "fr": "DPS Réaction"
+    },
+    "best": true,
+    "notes": [
+        {
+            "en": "[[character:shikanoin-heizou]] does not get the same benefits from an [[stat:em]] build as other [[element:anemo]] users do. He still has to level his talents, and allocate substats into offensive substats such as attack and crit to equal [[element:anemo]] DPS. However it is notably better than [[element:anemo]] DPS build if used in [[element:electrocharged]] teams.",
+            "fr": "[[character:shikanoin-heizou]] ne profite pas autant d'un build [[stat:em]] que les autres personnages [[element:anemo]]. Il doit tout de même monter ses talents et investir des substats offensives comme l'attaque et le crit pour égaler le DPS [[element:anemo]]. Cependant, ce build est nettement meilleur que le build DPS [[element:anemo]] s'il est utilisé dans les équipes [[element:electrocharged]]."
+        }
+    ],
+    "weapons": [
+        {
+            "author": "XXXX",
+            "link": "https://docs.google.com/spreadsheets/d/1U_P36PHD51-Yd8kgwvbd2AfR_fT0L1JTN8QueuUPtdE/edit?gid=1506614933#gid=1506614933"
+        }
+    ]
+}
