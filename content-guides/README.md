@@ -22,10 +22,14 @@ Character-level files live directly inside the character folder:
 
 ```txt
 src/content/pyro/4/amber/metadata.json
+src/content/pyro/4/amber/splash_art.webp
+src/content/pyro/4/amber/portrait.webp
 ```
 
 `metadata.json` is used for character display data and the home page character
-filters. Images in this file must come from the official HoYoWiki or the Hoyolab Battle Chronicles.
+filters. `splash_art.webp` and `portrait.webp` are preferred for character
+images when present; the `image` and `portrait` URLs in `metadata.json` stay as
+official fallback sources.
 
 Build-level files live inside each build folder:
 

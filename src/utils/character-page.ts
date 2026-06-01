@@ -5,6 +5,7 @@ import {
   getPublicCharacterName,
   parsePublicCharacterSlug,
 } from './character-slugs';
+import { resolveCharacterAssetUrl } from './character-assets';
 import {
   findCharacterPath,
   loadJSON,
@@ -802,6 +803,21 @@ export function getCharacterPageData({
   );
 
   const metadata = loadJSON(foundPath.path, 'metadata.json');
+  const assetContext = {
+    element: foundPath.element,
+    rarity: foundPath.rarity,
+    character: contentSlug,
+    characterPath: foundPath.path,
+  };
+  const metadataWithAssets = {
+    ...metadata,
+    image: resolveCharacterAssetUrl(assetContext, metadata.image, 'image'),
+    portrait: resolveCharacterAssetUrl(
+      assetContext,
+      metadata.portrait,
+      'portrait',
+    ),
+  };
 
   return {
     characterSlug,
@@ -810,7 +826,7 @@ export function getCharacterPageData({
       : translatedCharacterName !== contentSlug
         ? translatedCharacterName
         : toTitleCase(contentSlug),
-    metadata,
+    metadata: metadataWithAssets,
     element: foundPath.element,
     lang: currentLang,
     locale,

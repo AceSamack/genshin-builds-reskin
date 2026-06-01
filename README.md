@@ -47,6 +47,8 @@ genshin-builds/
 |   |   |   |-- <rarity>/
 |   |   |   |   |-- <character>/
 |   |   |   |   |   |-- metadata.json
+|   |   |   |   |   |-- splash_art.webp
+|   |   |   |   |   |-- portrait.webp
 |   |   |   |   |   |-- <build>/
 |   |   |   |   |   |   |-- weapons.json
 |   |   |   |   |   |   |-- artifacts-sets.json
@@ -178,7 +180,9 @@ The website is built on our folder structure: adding a new folder will automatic
 
 2. Find the correct character folder in [`src/content`](./src/content).
 
-3. Make sure the character folder has `metadata.json`.
+3. Make sure the character folder has `metadata.json`. Character images can be
+   hosted in the same folder as `splash_art.webp` and `portrait.webp`; the URLs
+   in `metadata.json` stay as official fallbacks.
 
 4. Add or update the build/character files.
 

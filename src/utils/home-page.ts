@@ -4,6 +4,7 @@ import {
   getPublicCharacterName,
   getPublicCharacterSlug,
 } from './character-slugs';
+import { resolveCharacterAssetUrl } from './character-assets';
 import { readJSONFile, toTitleCase } from './content';
 import { getLocale } from './i18n';
 import { TranslationHelper } from './translator';
@@ -67,11 +68,14 @@ export function getHomePageData(lang = 'en') {
             })
             .filter((character) => character.isDirectory())
             .flatMap((character) => {
-              const metadataPath = path.join(
+              const characterPath = path.join(
                 contentPath,
                 element.name,
                 rarity.name,
                 character.name,
+              );
+              const metadataPath = path.join(
+                characterPath,
                 'metadata.json',
               );
 
@@ -80,6 +84,12 @@ export function getHomePageData(lang = 'en') {
               }
 
               const metadata = readJSONFile(metadataPath);
+              const assetContext = {
+                element: element.name,
+                rarity: rarity.name,
+                character: character.name,
+                characterPath,
+              };
               const name = getPublicCharacterName(locale, {
                 character: character.name,
                 element: element.name,
@@ -94,18 +104,17 @@ export function getHomePageData(lang = 'en') {
                 element: element.name,
                 rarity: rarity.name,
                 weapon: metadata.weapon,
-                image: metadata.image?.trim(),
-                portrait: metadata.portrait?.trim(),
-                builds: getBuildSummaries(
-                  path.join(
-                    contentPath,
-                    element.name,
-                    rarity.name,
-                    character.name,
-                  ),
-                  lang,
-                  translator,
+                image: resolveCharacterAssetUrl(
+                  assetContext,
+                  metadata.image,
+                  'image',
                 ),
+                portrait: resolveCharacterAssetUrl(
+                  assetContext,
+                  metadata.portrait,
+                  'portrait',
+                ),
+                builds: getBuildSummaries(characterPath, lang, translator),
               };
             }),
         ),
