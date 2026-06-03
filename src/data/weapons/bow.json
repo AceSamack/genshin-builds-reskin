@@ -1309,7 +1309,7 @@
         "rarity": 4,
         "source": "Event",
         "passive": {
-            "en": "When an attack hits an opponent, deal AoE DMG equal to {{value}}% of Max HP at the target location. This effect can be triggered once every / of Max HP at the target's location. This effect can be triggered once every / of Max HP at the target's location. This effect can be triggered once every / of Max HP at the target's location. This effect can be triggered once every / of Max HP at the target's location. This effect can be triggered once every 15s.",
+            "en": "When an attack hits an opponent, deal AoE DMG equal to {{value}}% of Max HP at the target location. This effect can be triggered once every 15s.",
             "de": "Verursacht beim Treffen von Gegnern mit Angriffen an der Stelle des Ziels Flächenschaden basierend auf {{value}}% der max. LP, 15 s Abklingzeit.",
             "es": "Al golpear a un enemigo, inflige en su ubicación Daño en el AdE en una cantidad equivalente al {{value}}% de la Vida Máx. Este efecto solo se puede activar una vez cada 15 s.",
             "fr": "Lorsqu'une attaque touche un ennemi, des DGT de zone d'une valeur équivalant à {{value}}% des PV max sont infligés à l'emplacement de la cible. Cet effet peut être déclenché une fois toutes les 15 s.",

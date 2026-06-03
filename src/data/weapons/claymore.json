@@ -128,7 +128,7 @@
         "rarity": 4,
         "source": "Paimon's Bargains",
         "passive": {
-            "en": "After defeating an opponent, ATK is increased by /After defeating an opponent, ATK is increased by /After defeating an enemy, ATK is increased by /After defeating an enemy, ATK is increased by /After defeating an enemy, ATK is increased by {{value}}% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.",
+            "en": "After defeating an enemy, ATK is increased by {{value}}% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.",
             "de": "Erhöht den ANG beim Besiegen von Gegnern 30 s lang um {{value}}%. 3-fach stapelbar, Wirkungsdauer jeder Stapelung ist unabhängig.",
             "es": "Al derrotar a un enemigo, aumenta el ATQ en un {{value}}% durante 30 s, pudiéndose acumular hasta 3 veces. La duración de cada acumulación es independiente de las demás.",
             "fr": "Augmente l'ATQ de {{value}}% pendant 30 s après avoir vaincu un ennemi. Cet effet peut être cumulé 3 fois maximum et la durée de chaque cumul peut varier.",
@@ -163,7 +163,7 @@
     "bloodtainted-greatsword": {
         "rarity": 3,
         "passive": {
-            "en": "Increases DMG dealt against opponents affected by Pyro or Electro by /Increases DMG dealt against opponents affected by Pyro or Electro by /Increases DMG dealt against opponents affected by Pyro or Electro by /Increases DMG dealt against opponents affected by Pyro or Electro by /Increases DMG against opponents affected by Pyro or Electro by {{value}}%.",
+            "en": "Increases DMG against opponents affected by Pyro or Electro by {{value}}%.",
             "de": "Erhöht den von Pyro- oder Elektro-Effekten betroffenen Gegnern zugefügten Schaden um {{value}}%.",
             "es": "Aumenta en un {{value}}% el daño contra los enemigos afectados por Pyro o Electro.",
             "fr": "Augmente les DGT infligés aux ennemis affectés par les éléments Pyro ou Électro de {{value}}%.",
@@ -1140,7 +1140,7 @@
         "rarity": 4,
         "source": "Craft",
         "passive": {
-            "en": "Hitting an opponent with Normal and Charged Attacks has a /Hitting an opponent with Normal and Charged Attacks has a /Hitting an opponent with Normal and Charged Attacks has an /Hitting an opponent with Normal and Charged Attacks has a /Hitting an opponent with Normal and Charged Attacks has a {{value}}% chance of forming and dropping an Everfrost Icicle above them, dealing AoE DMG equal to {{value}}% of ATK. Opponents affected by Cryo are instead dealt DMG equal to {{value}}% of ATK. Can only occur once every 10s.",
+            "en": "Hitting an opponent with Normal and Charged Attacks has a {{value}}% chance of forming and dropping an Everfrost Icicle above them, dealing AoE DMG equal to {{value}}% of ATK. Opponents affected by Cryo are instead dealt DMG equal to {{value}}% of ATK. Can only occur once every 10s.",
             "de": "Erstellt beim Treffen von Gegnern mit Standardangriffen und heftigen Schlägen mit einer Wahrscheinlichkeit von {{value}}% über den Gegnern einen Kristallkern ewigen Eises, der herunterfällt und Flächenschaden in Höhe von {{value}}% ANG verursacht. Verursacht Schaden in Höhe von {{value}}% ANG, wenn die Gegner von Kryo-Effekten betroffen sind. 10 s Abklingzeit.",
             "es": "Al golpear a los enemigos con Ataques Normales y Cargados, hay un {{value}}% de probabilidad de crear un carámbano sobre ellos. Al caer, el carámbano inflige un {{value}}% de daño de ATQ en el AdE. Si los enemigos están afectados por Cryo, el daño de ATQ infligido será del {{value}}%. Este efecto solo puede ocurrir una vez cada 10 s.",
             "fr": "Les attaques normales et chargées ont {{value}}% de chances lorsqu'elles touchent de générer une stalactite de glace qui inflige des DGT de zone équivalant à {{value}}% de l'ATQ. Si l'ennemi est affecté par l'élément Cryo, la stalactite inflige alors {{value}}% de l'ATQ. Cet effet peut être déclenché une fois toutes les 10 s.",
