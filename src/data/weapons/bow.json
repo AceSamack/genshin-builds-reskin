@@ -960,7 +960,7 @@
         "rarity": 4,
         "source": "Playstation",
         "passive": {
-            "en": "Effective only on the following platform: <br>\"PlayStationâ„¢Network\"<br>Dealing Cryo DMG to opponents increases this character's Normal and Charged Attack DMG by 10% for 6s. This effect can have a maximum of 2 stacks. Additionally, when Aloy equips Predator, ATK is increased by 66.",
+            "en": "Effective only on the following platform: <br>\"PlayStation™Network\"<br>Dealing Cryo DMG to opponents increases this character's Normal and Charged Attack DMG by 10% for 6s. This effect can have a maximum of 2 stacks. Additionally, when Aloy equips Predator, ATK is increased by 66.",
             "de": "{{value}}wirksam:<br>{{value}}„PlayStation™Network“<br>Erhöht nach dem Treffen von Gegnern mit Kryo-Schaden den mit Standardangriffen und heftigen Schlägen verursachten Schaden 6 s lang um 10 %, 2-fach stapelbar. Erhöht Aloys ANG beim Anlegen von Raubtier zusätzlich um 66 Punkte.",
             "es": "{{value}}plataformas:<br>{{value}}“PlayStation™Network”.<br>Tras infligir Daño Cryo a los enemigos, el daño de los Ataques Normales y Cargados aumenta en un 10% durante 6 s. Puede acumularse hasta 2 veces. Además, cuando Aloy equipa el arma Depredador, su ATQ aumenta en 66 pts.",
             "fr": "{{value}}:<br>{{value}}»<br>Après avoir infligé des DGT Cryo aux ennemis, les DGT infligés par les attaques normales et chargées augmentent de 10 % pendant 6 s. Cet effet peut être cumulé 2 fois maximum. De plus, lorsque Aloy équipe le Predator, son ATQ augmente de 66 pts.",

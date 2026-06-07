@@ -136,10 +136,11 @@ function normalizeWeaponItemId(item: any) {
 }
 
 /**
- * Builds a reverse index of weapons that appear in character ranking lists.
+ * Builds a reverse index of weapons that appear in best-role ranking lists.
  *
- * Only the ordered `weapons` ranking groups are counted. Conditional options
- * and weapon IDs that only appear inside note text are intentionally skipped.
+ * Only builds marked `best: true` and their ordered `weapons` ranking groups
+ * are counted. Conditional options and weapon IDs that only appear inside note
+ * text are intentionally skipped.
  *
  * @param locale Locale dictionary bundle used for character display names.
  * @param lang Active language code used for character links.
@@ -187,6 +188,12 @@ function getWeaponRankingUsage(locale: any, lang: string) {
                 .filter((build) => build.isDirectory())
                 .forEach((build) => {
                   const buildPath = path.join(characterPath, build.name);
+                  const buildNoteData = loadJSON(buildPath, 'build-notes.json');
+
+                  if (buildNoteData?.best !== true) {
+                    return;
+                  }
+
                   const rawWeapons = loadJSON(buildPath, 'weapons.json');
                   const rankingGroups = Array.isArray(rawWeapons?.weapons)
                     ? rawWeapons.weapons
