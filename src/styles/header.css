@@ -405,3 +405,23 @@
     backdrop-filter: none;
   }
 }
+
+@media (max-height: 760px) and (min-width: 769px) {
+  .header-content {
+    height: 52px;
+  }
+
+  .logo-link h1 {
+    font-size: 1.2rem;
+  }
+
+  .menu-toggle {
+    width: 36px;
+    height: 36px;
+  }
+
+  .menu-backdrop,
+  .side-menu {
+    height: calc(100vh - 52px);
+  }
+}
