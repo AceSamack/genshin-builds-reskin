@@ -541,6 +541,13 @@
     transform 0.16s ease;
 }
 
+.roster-character::after {
+  display: block;
+  padding-bottom: 116%;
+  pointer-events: none;
+  content: '';
+}
+
 .roster-character::before {
   position: absolute;
   z-index: 2;
