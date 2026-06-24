@@ -267,6 +267,7 @@ export class TranslationHelper {
       '<button class="info-popover-trigger rotation-popover-trigger" type="button" aria-expanded="false">',
       escapeHtml(notation),
       '</button>',
+      '<template data-info-popover-template>',
       '<span class="info-popover-card rotation-popover-card" role="tooltip">',
       '<span class="rotation-popover-intro">',
       escapeHtml(
@@ -296,6 +297,7 @@ export class TranslationHelper {
       ),
       '</span>',
       '</span>',
+      '</template>',
       '</span>',
     ].join('');
   }
@@ -472,6 +474,7 @@ export class TranslationHelper {
       '<button class="info-popover-trigger" type="button" aria-expanded="false">',
       escapeHtml(label),
       '</button>',
+      '<template data-info-popover-template>',
       '<span class="info-popover-card" role="tooltip">',
       '<span class="info-popover-header',
       imageUrl ? ' has-image' : '',
@@ -496,6 +499,7 @@ export class TranslationHelper {
       '</span>',
       sourceFooter,
       '</span>',
+      '</template>',
       '</span>',
     ].join('');
   }
@@ -538,6 +542,7 @@ export class TranslationHelper {
       '<button class="info-popover-trigger artifact-popover-trigger" type="button" aria-expanded="false">',
       escapeHtml(label),
       '</button>',
+      '<template data-info-popover-template>',
       '<span class="info-popover-card artifact-popover-card" role="tooltip">',
       '<span class="info-popover-header',
       imageUrl ? ' has-image' : '',
@@ -557,11 +562,12 @@ export class TranslationHelper {
             escapeHtml(row.label),
             '</span><strong>',
             escapeHtml(row.value),
-            '</strong></span>',
+      '</strong></span>',
           ].join(''),
         )
         .join(''),
       '</span>',
+      '</template>',
       '</span>',
     ].join('');
   }
