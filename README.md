@@ -111,7 +111,7 @@ content/xiangling-energy-notes
 translation/fr-xingqiu-notes
 translation/es-ui-labels
 i18n/add-ja
-fix/mobile-side-menu
+fix/mobile-navbar
 docs/root-readme
 ```
 
