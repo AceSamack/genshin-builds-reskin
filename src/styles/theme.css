@@ -1,8 +1,8 @@
 :root {
-  --bg: #153434;
+  --bg: hsl(38, 8%, 14%);
   --text: hsla(0, 0%, 100%, 0.85);
   --accent: rgb(255, 215, 128);
-  --element: #30d8a0;
+  --element: hsl(42, 55%, 58%);
 }
 
 body {
@@ -21,32 +21,37 @@ body::before {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
+body[data-element="anemo"] {
+  --bg: hsl(160, 27%, 25%);
+  --element: hsl(160, 42%, 61%);
+}
+
 body[data-element="cryo"] {
-  --bg: #235d74;
-  --element: #7af0f0;
+  --bg: hsl(192, 28%, 28%);
+  --element: hsl(192, 43%, 75%);
 }
 
 body[data-element="dendro"] {
-  --bg: #263d21;
-  --element: #9de43b;
+  --bg: hsl(74,  41%, 24%);
+  --element: hsl(74,  56%, 51%);
 }
 
 body[data-element="electro"] {
-  --bg: #352a63;
-  --element: #c87fff;
+  --bg: hsl(279, 13%, 28%);
+  --element: hsl(279, 28%, 65%);
 }
 
 body[data-element="geo"] {
-  --bg: #3d2c1d;
-  --element: #f3b530;
+  --bg: hsl(42,  79%, 26%);
+  --element: hsl(42,  94%, 59%);
 }
 
 body[data-element="hydro"] {
-  --bg: #15315c;
-  --element: #02c0ff;
+  --bg: hsl(197, 70%, 26%);
+  --element: hsl(197, 85%, 63%);
 }
 
 body[data-element="pyro"] {
-  --bg: #3d1818;
-  --element: #ff6640;
+  --bg: hsl(23,  69%, 26%);
+  --element: hsl(23,  84%, 58%);
 }
