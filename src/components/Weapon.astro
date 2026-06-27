@@ -85,7 +85,7 @@ const hasFreeWeapon = rankedWeaponGroups.some((position) =>
 
   <div class="recommendation-card-body">
         {
-      hasFreeWeapon && (
+      false && hasFreeWeapon && (
         <p class="free-weapon-note">
           <span class="free-weapon-note-mark" aria-hidden="true" />
           {t(locale, 'ui', 'Highlighted weapons are free options.')}

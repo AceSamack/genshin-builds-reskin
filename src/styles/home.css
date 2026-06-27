@@ -52,11 +52,9 @@
 }
 
 .home-filters {
-  display: grid;
-  grid-template-columns:
-    minmax(240px, 1fr) repeat(3, minmax(112px, 0.38fr))
-    minmax(168px, 0.56fr);
-  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
   margin: 0 0 14px;
   border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 8px;
@@ -64,14 +62,78 @@
   background:
     linear-gradient(
       180deg,
-      rgba(255, 255, 255, 0.055),
-      rgba(255, 255, 255, 0.015)
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.02)
     ),
-    rgba(5, 8, 12, 0.28);
+    rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.06),
     0 14px 32px rgba(0, 0, 0, 0.12);
 }
+
+.home-filters-top {
+  display: grid;
+  grid-template-columns: minmax(240px, 1fr) repeat(2, minmax(112px, 0.38fr));
+  gap: 8px;
+}
+
+.home-filter-buttons-combined {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.home-filter-group-inline {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.home-filter-button {
+  position: relative;
+  transition:
+    transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.home-filter-button:hover,
+.home-filter-button:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+.home-filter-button[aria-pressed='true'] {
+  border-color: var(--filter-accent);
+  box-shadow:
+    inset 0 0 8px var(--filter-accent),
+    0 0 0 1px var(--filter-accent);
+  background: color-mix(in srgb, var(--filter-accent) 15%, transparent);
+}
+
+/* Filter Accent Colors - Elements */
+.home-filter-button-anemo { --filter-accent: #30d8a0; }
+.home-filter-button-cryo { --filter-accent: #7af0f0; }
+.home-filter-button-dendro { --filter-accent: #9de43b; }
+.home-filter-button-electro { --filter-accent: #c87fff; }
+.home-filter-button-geo { --filter-accent: #f3b530; }
+.home-filter-button-hydro { --filter-accent: #02c0ff; }
+.home-filter-button-pyro { --filter-accent: #ff6640; }
+
+/* Filter Accent Colors - Weapons */
+.home-filter-button-bow { --filter-accent: #70c2ff; }
+.home-filter-button-catalyst { --filter-accent: #c270ff; }
+.home-filter-button-claymore { --filter-accent: #ffb070; }
+.home-filter-button-polearm { --filter-accent: #ffd070; }
+.home-filter-button-sword { --filter-accent: #e0e0e0; }
 
 .home-search {
   grid-column: auto;
@@ -414,14 +476,15 @@
   background:
     linear-gradient(
       180deg,
-      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0.08),
       rgba(255, 255, 255, 0.02)
     ),
-    rgba(5, 8, 12, 0.24);
+    rgba(255, 255, 255, 0.04);
   box-shadow:
     inset 0 0 0 1px rgba(255, 255, 255, 0.1),
     0 18px 44px rgba(0, 0, 0, 0.16);
-  backdrop-filter: none;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .roster-list-header {
@@ -809,8 +872,8 @@
 }
 
 @media (max-width: 880px) {
-  .home-filters {
-    grid-template-columns: minmax(220px, 1fr) repeat(3, minmax(96px, 0.42fr));
+  .home-filters-top {
+    grid-template-columns: minmax(220px, 1fr) repeat(2, minmax(96px, 0.42fr));
   }
 
   .home-updated-toggle {
@@ -909,8 +972,8 @@
 }
 
 @media (max-width: 640px) {
-  .home-filters {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .home-filters-top {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .home-updated-toggle {

@@ -21,6 +21,8 @@ const characterArtAlt = t(locale, 'ui', 'Character art alt').replace(
   character,
 );
 const characterHeaderImage = metadata?.portrait ?? metadata?.image;
+const splashArt = metadata?.image;
+
 const buildLabel = t(locale, 'ui', 'Builds', undefined, false);
 const bestRoleLabel = t(locale, 'ui', 'Best Role');
 ---
@@ -40,8 +42,12 @@ const bestRoleLabel = t(locale, 'ui', 'Best Role');
     <!-- The header needs the URL slug, not the localized display name. -->
     <Header locale={locale} lang={lang} character={characterSlug} />
     <div class="page character-page">
+      <div class="character-splash-container" style={`background-image: url(${splashArt});`}>
+        <div class="splash-overlay"></div>
+      </div>
+
       <div class="character-page-layout">
-        <aside class="character-header" aria-labelledby="character-title">
+        <aside class="character-header glass-card" aria-labelledby="character-title">
           {
             characterHeaderImage && (
               <div class="character-art-stage">

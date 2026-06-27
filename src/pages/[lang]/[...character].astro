@@ -64,7 +64,7 @@ const noteMarkerExplanation = t(
       {
         builds.map((build) => {
           const buildContentId = `build-content-${build.slug}`;
-          const hasNoteMarkerHint = buildHasItemNotes(build.notes);
+          const hasNoteMarkerHint = false && buildHasItemNotes(build.notes);
           const isDefaultBuild = build.slug === defaultBuildSlug;
 
           return (
