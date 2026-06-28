@@ -37,17 +37,6 @@
   text-decoration: none;
 }
 
-.logo-mark {
-  display: grid;
-  width: 1.75rem;
-  height: 1.75rem;
-  place-items: center;
-  border: 1px solid color-mix(in srgb, var(--accent) 48%, transparent);
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--accent) 10%, transparent);
-  font-size: 0.8rem;
-}
-
 .nav-panel {
   display: flex;
   min-width: 0;
@@ -298,12 +287,6 @@ a.nav-link:focus-visible,
     font-size: 1.08rem;
   }
 
-  .logo-mark {
-    width: 1.55rem;
-    height: 1.55rem;
-    font-size: 0.7rem;
-  }
-
   .nav-toggle {
     display: flex;
   }
@@ -418,11 +401,6 @@ a.nav-link:focus-visible,
   .logo-link {
     gap: 0.4rem;
     font-size: 0.98rem;
-  }
-
-  .logo-mark {
-    width: 1.4rem;
-    height: 1.4rem;
   }
 
   .navbar-actions {

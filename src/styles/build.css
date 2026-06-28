@@ -789,7 +789,7 @@
   scroll-margin-top: 96px;
 }
 
-.note-highlight {
+.note-target:target {
   animation: note-highlight 1.4s ease-out;
 }
 
@@ -878,6 +878,8 @@
 .info-popover-card {
   position: fixed;
   top: 8px;
+  right: auto;
+  bottom: auto;
   left: 8px;
   z-index: 10000;
   display: none;
@@ -889,6 +891,7 @@
   border: 1px solid
     color-mix(in srgb, var(--element) 48%, rgba(255, 255, 255, 0.18));
   border-radius: 8px;
+  margin: 0;
   padding: 12px;
   background:
     linear-gradient(
@@ -908,7 +911,7 @@
   -webkit-overflow-scrolling: touch;
 }
 
-.info-popover-card.is-visible {
+.info-popover-card:popover-open {
   display: block;
 }
 
@@ -1143,11 +1146,6 @@
 }
 
 @media (max-width: 900px) {
-  body.info-popover-locked {
-    overflow: hidden;
-    overscroll-behavior: none;
-  }
-
   .info-popover-card {
     position: fixed;
     top: 50% !important;
@@ -1168,7 +1166,7 @@
     height: 58px;
   }
 
-  .info-popover-card.is-visible {
+  .info-popover-card:popover-open {
     display: block;
   }
 }
