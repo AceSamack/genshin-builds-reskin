@@ -10,8 +10,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "download:artifact-assets": "node scripts/download-artifact-assets.mjs",
-    "download:weapon-assets": "node scripts/download-weapon-assets.mjs",
+    "download:artifact-assets": "node scripts/download-assets.mjs artifact",
+    "download:weapon-assets": "node scripts/download-assets.mjs weapon",
     "project:plan": "node scripts/sync-build-project.mjs --print-plan",
     "project:sync": "node scripts/sync-build-project.mjs"
   },

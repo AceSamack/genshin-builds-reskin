@@ -74,10 +74,12 @@ const rankedWeaponGroups = weapons.weapons.map(
     alternativeItems: position.items.slice(1),
   }),
 );
-const hasFreeWeapon = rankedWeaponGroups.some((position) =>
-  Boolean(position.mainItem && isFreeWeapon(position.mainItem)) ||
-  position.alternativeItems.some((weapon) => isFreeWeapon(weapon)),
-) || conditionalWeapons.some((weapon) => isFreeWeapon(weapon));
+const hasFreeWeapon =
+  rankedWeaponGroups.some(
+    (position) =>
+      Boolean(position.mainItem && isFreeWeapon(position.mainItem)) ||
+      position.alternativeItems.some((weapon) => isFreeWeapon(weapon)),
+  ) || conditionalWeapons.some((weapon) => isFreeWeapon(weapon));
 ---
 
 <div class="card recommendation-card weapon-card">
@@ -197,7 +199,3 @@ const hasFreeWeapon = rankedWeaponGroups.some((position) =>
     }
   </div>
 </div>
-
-<script>
-  import '../scripts/info-popover';
-</script>
