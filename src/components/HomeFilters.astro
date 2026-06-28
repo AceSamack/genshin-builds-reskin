@@ -52,104 +52,26 @@ const weaponOptions = weapons.map((weapon) => ({
       />
     </label>
 
-    {
-      hasRecentUpdates && (
-        <label class="home-updated-toggle">
-          <input
-            class="home-updated-toggle-input"
-            type="checkbox"
-            name="updated"
-            value="latest"
-          />
-          <span class="home-updated-toggle-mark" aria-hidden="true" />
-          <span class="home-updated-text">
-            <span class="home-updated-toggle-title">{recentlyUpdatedLabel}</span>
-            {versionText && (
-              <span class="home-updated-toggle-version">{versionText}</span>
-            )}
-          </span>
-          <span class="home-updated-toggle-count">{recentlyUpdatedCount}</span>
-        </label>
-      )
-    }
-  </div>
-
-  <div class="home-filter-buttons-combined">
-    <div class="home-filter-group-inline">
-      <input
-        type="hidden"
-        name="element"
-        value=""
-        data-element-filter-value
-      />
-      <div class="home-filter-buttons" data-element-buttons>
-        {
-          elementOptions.map((option) => (
-            <ImageButton
-              type="button"
-              src={sitePath(`icons/${option.icon}.webp`)}
-              alt={option.label}
-              ariaLabel={option.label}
-              title={option.label}
-              pressed={false}
-              class={`home-filter-button home-element-button home-filter-button-${option.value}`}
-              data-element-value={option.value}
-            />
-          ))
-        }
-      </div>
-    </div>
-
-    <div class="home-filter-group-inline">
-      <input
-        type="hidden"
-        name="weapon"
-        value=""
-        data-weapon-filter-value
-      />
-      <div class="home-filter-buttons" data-weapon-buttons>
-        {
-          weaponOptions.map((option) => (
-            <ImageButton
-              type="button"
-              src={sitePath(`icons/${option.icon}.webp`)}
-              alt={option.label}
-              ariaLabel={option.label}
-              title={option.label}
-              pressed={false}
-              class={`home-filter-button home-weapon-button home-filter-button-${option.value}`}
-              data-weapon-value={option.value}
-            />
-          ))
-        }
-      </div>
-    </div>
-    
-    <div class="home-filter-group-inline">
-      <input
-        type="hidden"
-        name="rarity"
-        value=""
-        data-rarity-filter-value
-      />
-      <div class="home-filter-buttons" data-rarity-buttons>
-        {
-          rarities.map((rarity) => (
-            <ImageButton
-              type="button"
-              src={sitePath(`icons/rarity-${rarity}.svg`)}
-              alt={`${rarity}★`}
-              ariaLabel={`${rarity}★`}
-              title={`${rarity}★`}
-              pressed={false}
-              class={`home-filter-button home-rarity-button`}
-              data-rarity-value={rarity}
-            />
-          ))
-        }
-      </div>
-    </div>
-  </div>
+  {
+    hasRecentUpdates && (
+      <label class="home-updated-toggle">
+        <input
+          class="home-updated-toggle-input"
+          type="checkbox"
+          name="updated"
+          value="true"
+        />
+        <span class="home-updated-toggle-mark" aria-hidden="true" />
+        <span class="home-updated-text">
+          <span class="home-updated-toggle-title">{recentlyUpdatedLabel}</span>
+          {versionText && (
+            <span class="home-updated-toggle-version">{versionText}</span>
+          )}
+        </span>
+        <span class="home-updated-toggle-count">{recentlyUpdatedCount}</span>
+      </label>
+    )
+  }
 </form>
 
 <style>
