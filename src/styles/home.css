@@ -128,47 +128,19 @@
 
 .home-native-select {
   display: block;
-  appearance: none;
-  color-scheme: light;
   cursor: pointer;
 }
 
+@supports (-moz-appearance: none) {
+  .home-native-select {
+    background-color: #fff;
+    background-clip: text;
+  }
+}
+
 .home-native-select option {
-  background-color: #fff;
+  background: white;
   color: #111;
-  color-scheme: light;
-}
-
-.home-native-select option:checked {
-  background-color: #e8edf3;
-  color: #111;
-}
-
-.home-native-select::-ms-expand {
-  display: none;
-}
-
-.home-select-filter {
-  padding-right: 34px;
-}
-
-.home-select-filter::after {
-  position: absolute;
-  right: 13px;
-  bottom: 19px;
-  width: 7px;
-  height: 7px;
-  border-right: 2px solid color-mix(in srgb, var(--text) 52%, transparent);
-  border-bottom: 2px solid color-mix(in srgb, var(--text) 52%, transparent);
-  pointer-events: none;
-  transform: rotate(45deg);
-  transition: border-color 0.16s ease;
-  content: '';
-}
-
-.home-select-filter:hover::after,
-.home-select-filter:focus-within::after {
-  border-color: color-mix(in srgb, var(--accent) 78%, white 6%);
 }
 
 .home-filters input::placeholder {
@@ -746,10 +718,6 @@
   .home-native-select {
     min-height: 26px;
     font-size: 0.86rem;
-  }
-
-  .home-select-filter::after {
-    bottom: 16px;
   }
 
   .home-updated-toggle-mark {
