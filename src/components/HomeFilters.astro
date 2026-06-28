@@ -41,7 +41,7 @@ const weaponOptions = weapons.map((weapon) => ({
 ---
 
 <form class="home-filters" data-character-filters>
-  <div class="home-filters-top">
+  <div class="home-filters-top toolbar">
     <label class="home-search">
       {t(locale, 'ui', 'Search')}
       <input
@@ -51,21 +51,6 @@ const weaponOptions = weapons.map((weapon) => ({
         autocomplete="off"
       />
     </label>
-
-    <div class="home-select-filter">
-      {t(locale, 'ui', 'Rarity')}
-      <select
-        class="home-native-select"
-        name="rarity"
-        aria-label={t(locale, 'ui', 'Rarity')}
-      >
-        {
-          rarityOptions.map((option) => (
-            <option value={option.value}>{option.label}</option>
-          ))
-        }
-      </select>
-    </div>
 
     {
       hasRecentUpdates && (
@@ -139,6 +124,31 @@ const weaponOptions = weapons.map((weapon) => ({
         }
       </div>
     </div>
+    
+    <div class="home-filter-group-inline">
+      <input
+        type="hidden"
+        name="rarity"
+        value=""
+        data-rarity-filter-value
+      />
+      <div class="home-filter-buttons" data-rarity-buttons>
+        {
+          rarities.map((rarity) => (
+            <ImageButton
+              type="button"
+              src={sitePath(`icons/rarity-${rarity}.svg`)}
+              alt={`${rarity}★`}
+              ariaLabel={`${rarity}★`}
+              title={`${rarity}★`}
+              pressed={false}
+              class={`home-filter-button home-rarity-button`}
+              data-rarity-value={rarity}
+            />
+          ))
+        }
+      </div>
+    </div>
   </div>
 </form>
 
@@ -183,4 +193,5 @@ const weaponOptions = weapons.map((weapon) => ({
 
   initFilterButtons('[data-element-value]', '[data-element-filter-value]', 'elementValue');
   initFilterButtons('[data-weapon-value]', '[data-weapon-filter-value]', 'weaponValue');
+  initFilterButtons('[data-rarity-value]', '[data-rarity-filter-value]', 'rarityValue');
 </script>
