@@ -80,12 +80,6 @@ const hasFreeWeapon =
       Boolean(position.mainItem && isFreeWeapon(position.mainItem)) ||
       position.alternativeItems.some((weapon) => isFreeWeapon(weapon)),
   ) || conditionalWeapons.some((weapon) => isFreeWeapon(weapon));
-const hasFreeWeapon =
-  rankedWeaponGroups.some(
-    (position) =>
-      Boolean(position.mainItem && isFreeWeapon(position.mainItem)) ||
-      position.alternativeItems.some((weapon) => isFreeWeapon(weapon)),
-  ) || conditionalWeapons.some((weapon) => isFreeWeapon(weapon));
 ---
 
 <div class="card recommendation-card weapon-card">

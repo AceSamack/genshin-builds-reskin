@@ -26,11 +26,6 @@ body[data-element="anemo"] {
   --element: hsl(160, 42%, 61%);
 }
 
-body[data-element="anemo"] {
-  --bg: #153434;
-  --element: #30d8a0;
-}
-
 body[data-element="cryo"] {
   --bg: hsl(192, 28%, 28%);
   --element: hsl(192, 43%, 75%);
@@ -62,6 +57,6 @@ body[data-element="pyro"] {
 }
 
 body[data-element="base"] {
-  --bg: #153434;
-  --element: #30d8a0;
+  --bg: hsl(38, 8%, 14%);;
+  --element: hsl(42, 55%, 58%);
 }
