@@ -40,18 +40,82 @@ const weaponOptions = weapons.map((weapon) => ({
 }));
 ---
 
-<form class="home-filters" data-character-filters>
-  <div class="home-filters-top toolbar">
-    <label class="home-search">
-      {t(locale, 'ui', 'Search')}
-      <input
-        type="search"
-        name="search"
-        placeholder={t(locale, 'ui', 'Search by name')}
-        autocomplete="off"
-      />
-    </label>
+<form class="home-filters" id="character-filters" data-character-filters>
+  <label class="home-search">
+    {t(locale, 'ui', 'Search')}
+    <input
+      type="search"
+      name="search"
+      placeholder={t(locale, 'ui', 'Search by name')}
+      autocomplete="off"
+    />
+  </label>
 
+  <div class="home-select-filter">
+    {t(locale, 'ui', 'Element')}
+    <select
+      class="home-native-select"
+      name="element"
+      aria-label={t(locale, 'ui', 'Element')}
+    >
+      {
+        elementOptions.map((option) => (
+          <option value={option.value}>{option.label}</option>
+        ))
+      }
+    </select>
+  </div>
+
+  <div class="home-select-filter">
+    {t(locale, 'ui', 'Rarity')}
+    <select
+      class="home-native-select"
+      name="rarity"
+      aria-label={t(locale, 'ui', 'Rarity')}
+    >
+      {
+        rarityOptions.map((option) => (
+          <option value={option.value}>{option.label}</option>
+        ))
+      }
+    </select>
+  </div>
+
+  <div class="home-select-filter">
+    {t(locale, 'ui', 'Weapon')}
+    <select
+      class="home-native-select"
+      name="weapon"
+      aria-label={t(locale, 'ui', 'Weapon')}
+    >
+      {
+        weaponOptions.map((option) => (
+          <option value={option.value}>{option.label}</option>
+        ))
+      }
+    </select>
+  </div>
+
+  {
+    hasRecentUpdates && (
+      <label class="home-updated-toggle">
+        <input
+          class="home-updated-toggle-input"
+          type="checkbox"
+          name="updated"
+          value="true"
+        />
+        <span class="home-updated-toggle-mark" aria-hidden="true" />
+        <span class="home-updated-text">
+          <span class="home-updated-toggle-title">{recentlyUpdatedLabel}</span>
+          {versionText && (
+            <span class="home-updated-toggle-version">{versionText}</span>
+          )}
+        </span>
+        <span class="home-updated-toggle-count">{recentlyUpdatedCount}</span>
+      </label>
+    )
+  }
     {
       hasRecentUpdates && (
         <label class="home-updated-toggle">
