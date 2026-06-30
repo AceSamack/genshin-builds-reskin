@@ -193,22 +193,26 @@
   cursor: pointer;
 }
 
+.home-filters .home-native-select {
+  appearance: none;
+}
+
 @supports (-moz-appearance: none) {
   .home-native-select {
-    background-color: #fff;
+    background-color: #1b1b20;
     background-clip: text;
   }
 }
 
 .home-native-select option {
-  background-color: #fff;
-  color: #111;
-  color-scheme: light;
+  background-color: #1b1b20;
+  color: #f5f5f5;
+  color-scheme: dark;
 }
 
 .home-native-select option:checked {
-  background-color: #e8edf3;
-  color: #111;
+  background-color: #2c2c34;
+  color: #fff;
 }
 
 .home-native-select::-ms-expand {

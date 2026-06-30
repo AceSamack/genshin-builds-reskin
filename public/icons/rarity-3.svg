@@ -1,6 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 250 250">
   <path d="M 60.0,26.0 L 68.23,48.67 L 92.34,49.49 L 73.31,64.33 L 79.98,87.51 L 60.0,74.0 L 40.02,87.51 L 46.69,64.33 L 27.66,49.49 L 51.77,48.67 Z" fill="#FFD500" stroke="#E0A800" stroke-width="2" stroke-linejoin="round"/>
-  <path d="M 190.0,26.0 L 198.23,48.67 L 222.34,49.49 L 203.31,64.33 L 209.98,87.51 L 190.0,74.0 L 170.02,87.51 L 176.69,64.33 L 157.66,49.49 L 181.77,48.67 Z" fill="#FFD500" stroke="#E0A800" stroke-width="2" stroke-linejoin="round"/>
-  <path d="M 60.0,156.0 L 68.23,178.67 L 92.34,179.49 L 73.31,194.33 L 79.98,217.51 L 60.0,204.0 L 40.02,217.51 L 46.69,194.33 L 27.66,179.49 L 51.77,178.67 Z" fill="#FFD500" stroke="#E0A800" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M 125.0,91.0 L 133.23,113.67 L 157.34,114.49 L 138.31,129.33 L 144.98,152.51 L 125.0,139.0 L 105.02,152.51 L 111.69,129.33 L 92.66,114.49 L 116.77,113.67 Z" fill="#FFD500" stroke="#E0A800" stroke-width="2" stroke-linejoin="round"/>
   <path d="M 190.0,156.0 L 198.23,178.67 L 222.34,179.49 L 203.31,194.33 L 209.98,217.51 L 190.0,204.0 L 170.02,217.51 L 176.69,194.33 L 157.66,179.49 L 181.77,178.67 Z" fill="#FFD500" stroke="#E0A800" stroke-width="2" stroke-linejoin="round"/>
 </svg>

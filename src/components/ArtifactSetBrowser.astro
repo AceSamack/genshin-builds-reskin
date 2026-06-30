@@ -1,5 +1,7 @@
 ---
 import { t } from '../utils/i18n';
+import { sitePath } from '../utils/paths';
+import ImageButton from './ImageButton.astro';
 
 type ArtifactSetBrowserData = {
   artifactSets: {
@@ -63,41 +65,54 @@ const noMentionsLabel = t(
 
 <section class="artifact-set-browser" data-artifact-browser>
   <form class="home-filters artifact-set-filters" data-artifact-filters>
-    <label class="home-search">
-      {searchLabel}
-      <input
-        type="search"
-        name="search"
-        placeholder={searchByNameLabel}
-        autocomplete="off"
-      />
-    </label>
+    <div class="home-filters-top toolbar"> 
+        <label class="home-search">
+            {searchLabel}
+            <input
+                type="search"
+                name="search"
+                placeholder={searchByNameLabel}
+                autocomplete="off"
+            />
+        </label>
 
-    <div class="home-select-filter">
-      {rarityLabel}
-      <select class="home-native-select" name="rarity" aria-label={rarityLabel}>
-        <option value="">{allLabel}</option>
-        {
-          data.rarities.map((rarity) => (
-            <option value={String(rarity)}>
-              {rarity}
-              {'\u2605'}
-            </option>
-          ))
-        }
-      </select>
+        <div class="home-select-filter">
+            {bonusLabel}
+            <select class="home-native-select" name="bonus" aria-label={bonusLabel}>
+                <option value="">{allLabel}</option>
+                {
+                data.bonusTypes.map((bonus) => (
+                    <option value={bonus.id}>{bonus.label}</option>
+                ))
+                }
+            </select>
+        </div>
     </div>
-
-    <div class="home-select-filter">
-      {bonusLabel}
-      <select class="home-native-select" name="bonus" aria-label={bonusLabel}>
-        <option value="">{allLabel}</option>
-        {
-          data.bonusTypes.map((bonus) => (
-            <option value={bonus.id}>{bonus.label}</option>
-          ))
-        }
-      </select>
+    <div class="home-filter-buttons-combined">
+        <div class="home-filter-group-inline">
+            <input
+                type="hidden"
+                name="rarity"
+                value=""
+                data-rarity-filter-value
+            />
+            <div class="home-filter-buttons" data-rarity-buttons>
+                {
+                data.rarities.map((rarity) => (
+                    <ImageButton
+                    type="button"
+                    src={sitePath(`icons/rarity-${rarity}.svg`)}
+                    alt={`${rarity}★`}
+                    ariaLabel={`${rarity}★`}
+                    title={`${rarity}★`}
+                    pressed={false}
+                    class={`home-filter-button home-rarity-button`}
+                    data-rarity-value={rarity}
+                    />
+                ))
+                }
+            </div>
+        </div>
     </div>
   </form>
 
@@ -186,4 +201,6 @@ const noMentionsLabel = t(
 
 <script>
   import '../scripts/card-filters';
+  import { initFilterButtons } from '../utils/home-page';
+  initFilterButtons('[data-rarity-value]', '[data-rarity-filter-value]', 'rarityValue');
 </script>

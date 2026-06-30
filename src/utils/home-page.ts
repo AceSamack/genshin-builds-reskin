@@ -118,3 +118,28 @@ export function getHomePageData(lang = 'en') {
     locale,
   };
 }
+
+export function initFilterButtons(buttonSelector: string, inputSelector: string, valueAttr: string) {
+    const buttons = document.querySelectorAll<HTMLButtonElement>(buttonSelector);
+    const valueInput = document.querySelector<HTMLInputElement>(inputSelector);
+
+    if (buttons.length && valueInput) {
+        const setActive = (value: string) => {
+        valueInput.value = value;
+        buttons.forEach((button) => {
+            const isActive = button.dataset[valueAttr] === value;
+            button.setAttribute('aria-pressed', String(isActive));
+        });
+        valueInput.dispatchEvent(new Event('change', { bubbles: true }));
+        };
+
+        setActive('');
+
+        buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const value = button.dataset[valueAttr] ?? '';
+            setActive(valueInput.value === value ? '' : value);
+        });
+        });
+    }
+}
