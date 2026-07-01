@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { readJSONFile } from './content';
 
 export type ContentCharacter = {
   element: string;
@@ -11,6 +12,7 @@ export type ContentCharacter = {
 
 export function getContentCharacters(
   contentPath = path.resolve('src/content'),
+  includeWip = false,
 ): ContentCharacter[] {
   if (!fs.existsSync(contentPath)) return [];
 
@@ -38,8 +40,16 @@ export function getContentCharacters(
               );
               const metadataPath = path.join(characterPath, 'metadata.json');
 
-              return fs.existsSync(metadataPath)
-                ? [
+              if (!fs.existsSync(metadataPath)) return [];
+
+              const isWip =
+                String(readJSONFile(metadataPath)?.last_updated ?? '')
+                  .trim()
+                  .toUpperCase() === 'WIP';
+
+              return isWip && !includeWip
+                ? []
+                : [
                     {
                       element: element.name,
                       rarity: rarity.name,
@@ -47,8 +57,7 @@ export function getContentCharacters(
                       characterPath,
                       metadataPath,
                     },
-                  ]
-                : [];
+                  ];
             }),
         ),
     );

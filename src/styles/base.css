@@ -140,3 +140,23 @@ a:hover {
     scroll-behavior: smooth;
   }
 }
+
+.usage-rank-number {
+  display: grid;
+  width: 22px;
+  min-height: 22px;
+  flex: 0 0 22px;
+  place-items: center;
+  margin-right: 6px;
+  border: 1px solid color-mix(in srgb, var(--character-rarity) 30%, transparent);
+  border-radius: 7px;
+  background: color-mix(
+    in srgb,
+    var(--character-rarity) 14%,
+    rgba(0, 0, 0, 0.22)
+  );
+  color: color-mix(in srgb, #fff 88%, var(--character-rarity) 12%);
+  font-size: 0.68rem;
+  font-weight: 900;
+  line-height: 1;
+}

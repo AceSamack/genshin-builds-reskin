@@ -41,6 +41,7 @@ type WeaponRankingUsage = {
   characterName: string;
   characterRarity: string;
   href: string;
+  rank: number;
 };
 
 /**
@@ -164,14 +165,21 @@ function getWeaponRankingUsage(locale: any, lang: string) {
       const rankingGroups = loadJSON(build.path, 'weapons.json')?.weapons ?? [];
       const seenInBuild = new Set<string>();
 
-      for (const group of rankingGroups) {
+      for (const [groupIndex, group] of rankingGroups.entries()) {
         for (const item of group.items ?? []) {
           const weaponId = normalizeWeaponItemId(item);
           if (!weaponId || seenInBuild.has(weaponId)) continue;
 
           seenInBuild.add(weaponId);
           const usage = usageByWeapon.get(weaponId) ?? [];
-          if (!usage.some((item) => item.href === href)) usage.push(usageEntry);
+          const existingUsage = usage.find((item) => item.href === href);
+          const rank = groupIndex + 1;
+
+          if (existingUsage) {
+            existingUsage.rank = Math.min(existingUsage.rank, rank);
+          } else {
+            usage.push({ ...usageEntry, rank });
+          }
           usageByWeapon.set(weaponId, usage);
         }
       }

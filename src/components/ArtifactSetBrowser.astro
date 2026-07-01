@@ -19,6 +19,7 @@ type ArtifactSetBrowserData = {
       characterName: string;
       characterRarity: string;
       href: string;
+      rank?: number;
     }[];
   }[];
   bonusTypes: {
@@ -181,6 +182,9 @@ const noMentionsLabel = t(
                     class={`artifact-set-usage-chip character-rarity-${usage.characterRarity}`}
                     href={usage.href}
                   >
+                    {usage.rank && (
+                      <strong class="usage-rank-number">{usage.rank}</strong>
+                    )}
                     <span class="artifact-set-usage-character">
                       {usage.characterName}
                     </span>

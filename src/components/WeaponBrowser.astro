@@ -31,6 +31,7 @@ type WeaponBrowserData = {
       characterName: string;
       characterRarity: string;
       href: string;
+      rank: number;
     }[];
     passivePanels: {
       refinement: number;
@@ -266,6 +267,7 @@ const weaponOptions = data.weaponTypes.map((weaponType) => ({
                     class={`weapon-ranking-chip character-rarity-${usage.characterRarity}`}
                     href={usage.href}
                   >
+                    <strong class="usage-rank-number">{usage.rank}</strong>
                     <span class="weapon-ranking-character">
                       {usage.characterName}
                     </span>

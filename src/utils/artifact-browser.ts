@@ -27,6 +27,7 @@ type ArtifactSetUsage = {
   characterName: string;
   characterRarity: string;
   href: string;
+  rank?: number;
 };
 
 /**
@@ -120,15 +121,19 @@ function getArtifactSetFourPieceUsage(locale: any, lang: string) {
 
       const data = loadJSON(build.path, 'artifacts-sets.json');
       const groups = [
-        ...(data?.artifact_sets?.flatMap((rank: any) => rank.groups ?? []) ??
-          []),
-        ...(data?.conditional?.flatMap(
-          (entry: any) => entry.groups ?? [entry],
+        ...(data?.artifact_sets?.flatMap((entry: any, index: number) =>
+          (entry.groups ?? []).map((group: any) => ({
+            group,
+            rank: index + 1,
+          })),
+        ) ?? []),
+        ...(data?.conditional?.flatMap((entry: any) =>
+          (entry.groups ?? [entry]).map((group: any) => ({ group })),
         ) ?? []),
       ];
       const seenInBuild = new Set<string>();
 
-      for (const group of groups) {
+      for (const { group, rank } of groups) {
         for (const item of getArtifactSetItems(group)) {
           if (Number(item?.pieces) !== 4) continue;
 
@@ -137,7 +142,13 @@ function getArtifactSetFourPieceUsage(locale: any, lang: string) {
 
           seenInBuild.add(setId);
           const usage = usageBySet.get(setId) ?? [];
-          if (!usage.some((item) => item.href === href)) usage.push(usageEntry);
+          const existingUsage = usage.find((item) => item.href === href);
+
+          if (existingUsage && rank !== undefined) {
+            existingUsage.rank = Math.min(existingUsage.rank ?? rank, rank);
+          } else if (!existingUsage) {
+            usage.push({ ...usageEntry, rank });
+          }
           usageBySet.set(setId, usage);
         }
       }

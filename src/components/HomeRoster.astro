@@ -8,14 +8,15 @@ const characterCountLabel = t(locale, 'ui', 'Characters');
 const noResultsLabel = t(locale, 'ui', 'No characters found');
 const openBuildsLabel = t(locale, 'ui', 'Open builds');
 const resultsLabel = t(locale, 'ui', 'Results');
-const versionLabel = t(locale, 'ui', 'Version', undefined, false);
+const releaseDateLabel = t(locale, 'ui', 'Release date', undefined, false);
+const newestLabel = t(locale, 'ui', 'Newest', undefined, false);
 const characterPortraitAltTemplate = t(locale, 'ui', 'Character portrait alt');
 const sortByLabel = t(locale, 'ui', 'Sort by', undefined, false);
 const sortOptions = [
+  { value: 'release', label: `${releaseDateLabel} - ${newestLabel}` },
   { value: 'name', label: `${characterCountLabel} - A-Z` },
   { value: 'element', label: `${t(locale, 'ui', 'Element')} - A-Z` },
   { value: 'rarity', label: `${t(locale, 'ui', 'Rarity')} - A-Z` },
-  { value: 'weapon', label: `${t(locale, 'ui', 'Weapon')} - A-Z` },
 ];
 const eagerPortraitCount = 9;
 const highPriorityPortraitCount = 4;
@@ -83,10 +84,15 @@ const rosterCharacters = characters.map(getCharacterViewModel);
 
           return (
             <a
-              class={`roster-character ${character.element}`}
-              href={character.href}
+              class={`roster-character ${character.element}${character.isWip ? ' is-wip' : ''}`}
+              href={character.isWip ? undefined : character.href}
               role="listitem"
-              aria-label={`${character.name}, ${character.weaponLabel}. ${openBuildsLabel}`}
+              aria-label={
+                character.isWip
+                  ? `${character.name}, WIP`
+                  : `${character.name}, ${character.weaponLabel}. ${openBuildsLabel}`
+              }
+              aria-disabled={character.isWip ? 'true' : undefined}
               data-character-card
               data-element={character.element}
               data-last-updated={character.lastUpdated}
@@ -96,6 +102,7 @@ const rosterCharacters = characters.map(getCharacterViewModel);
               }
               data-rarity={character.rarity}
               data-rarity-label={character.rarityLabel}
+              data-version-released={character.versionReleased}
               data-weapon={character.weapon}
             >
               <span class="roster-character-art">
@@ -117,15 +124,11 @@ const rosterCharacters = characters.map(getCharacterViewModel);
 
               <span class="roster-character-copy" aria-hidden="true">
                 <span class="roster-character-name">{character.name}</span>
-                <span class="roster-character-meta">
-                  <span>{character.rarityLabel}</span>
-                  <span>{character.weaponLabel}</span>
-                </span>
               </span>
 
               {character.lastUpdated && (
                 <span class="roster-character-updated" aria-hidden="true">
-                  {versionLabel} {character.lastUpdated}
+                  {character.lastUpdated}
                 </span>
               )}
             </a>

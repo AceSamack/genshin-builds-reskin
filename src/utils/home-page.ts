@@ -19,16 +19,19 @@ function normalizeVersion(version: unknown) {
     : '';
 }
 
-function getLatestChangelogVersion(contentPath: string) {
+function getRecentChangelogVersions(contentPath: string) {
   const changelogPath = path.join(contentPath, 'site', 'changelog.json');
 
   if (!fs.existsSync(changelogPath)) {
-    return '';
+    return [];
   }
 
   const changelog = readJSONFile(changelogPath);
 
-  return normalizeVersion(changelog?.groups?.[0]?.version);
+  return (changelog?.groups ?? [])
+    .slice(0, 2)
+    .map((group: any) => normalizeVersion(group.version))
+    .filter(Boolean);
 }
 
 function getBuildSummaries(
@@ -65,9 +68,9 @@ export function getHomePageData(lang = 'en') {
   const locale = getLocale(lang);
   const contentPath = path.join(process.cwd(), 'src', 'content');
   const translator = new TranslationHelper(locale, {}, lang);
-  const latestVersion = getLatestChangelogVersion(contentPath);
+  const recentVersions = getRecentChangelogVersions(contentPath);
 
-  const characters = getContentCharacters(contentPath)
+  const characters = getContentCharacters(contentPath, true)
     .map(({ character, characterPath, element, metadataPath, rarity }) => {
       const metadata = readJSONFile(metadataPath);
       const assetContext = {
@@ -81,6 +84,7 @@ export function getHomePageData(lang = 'en') {
         element,
       });
       const lastUpdated = normalizeVersion(metadata.last_updated);
+      const versionReleased = normalizeVersion(metadata.version_released);
 
       return {
         name,
@@ -92,9 +96,9 @@ export function getHomePageData(lang = 'en') {
         rarity,
         weapon: metadata.weapon,
         lastUpdated,
-        isRecentlyUpdated: latestVersion
-          ? lastUpdated === latestVersion
-          : false,
+        versionReleased,
+        isWip: lastUpdated.toUpperCase() === 'WIP',
+        isRecentlyUpdated: recentVersions.includes(lastUpdated),
         image: resolveCharacterAssetUrl(assetContext, metadata.image, 'image'),
         portrait: resolveCharacterAssetUrl(
           assetContext,
@@ -106,13 +110,13 @@ export function getHomePageData(lang = 'en') {
     })
     .sort((a, b) => a.name.localeCompare(b.name));
 
-  const recentlyUpdatedCharacters = latestVersion
-    ? characters.filter((character) => character.lastUpdated === latestVersion)
-    : [];
+  const recentlyUpdatedCharacters = characters.filter(
+    (character) => character.isRecentlyUpdated,
+  );
 
   return {
     characters,
-    latestVersion,
+    recentVersions,
     recentlyUpdatedCharacters,
     lang,
     locale,

@@ -8,6 +8,7 @@
 - [ ] I have linked the PR to the corresponding Issue if any
 - [ ] I have updated the changelog if needed
 - [ ] I have updated the "Last updated" metadata if needed
+- [ ] The "Last Updated" metadata is "WIP" if the character's guide isn't ready yet
 
 If you changed a note that was already translated / Added a new section that needs translating:
 - [ ] The necessary language tags are present on the PR
