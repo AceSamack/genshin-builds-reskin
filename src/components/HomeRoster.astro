@@ -84,10 +84,15 @@ const rosterCharacters = characters.map(getCharacterViewModel);
 
           return (
             <a
-              class={`roster-character ${character.element}`}
-              href={character.href}
+              class={`roster-character ${character.element}${character.isWip ? ' is-wip' : ''}`}
+              href={character.isWip ? undefined : character.href}
               role="listitem"
-              aria-label={`${character.name}, ${character.weaponLabel}. ${openBuildsLabel}`}
+              aria-label={
+                character.isWip
+                  ? `${character.name}, WIP`
+                  : `${character.name}, ${character.weaponLabel}. ${openBuildsLabel}`
+              }
+              aria-disabled={character.isWip ? 'true' : undefined}
               data-character-card
               data-element={character.element}
               data-last-updated={character.lastUpdated}

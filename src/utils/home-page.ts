@@ -70,7 +70,7 @@ export function getHomePageData(lang = 'en') {
   const translator = new TranslationHelper(locale, {}, lang);
   const recentVersions = getRecentChangelogVersions(contentPath);
 
-  const characters = getContentCharacters(contentPath)
+  const characters = getContentCharacters(contentPath, true)
     .map(({ character, characterPath, element, metadataPath, rarity }) => {
       const metadata = readJSONFile(metadataPath);
       const assetContext = {
@@ -97,6 +97,7 @@ export function getHomePageData(lang = 'en') {
         weapon: metadata.weapon,
         lastUpdated,
         versionReleased,
+        isWip: lastUpdated.toUpperCase() === 'WIP',
         isRecentlyUpdated: recentVersions.includes(lastUpdated),
         image: resolveCharacterAssetUrl(assetContext, metadata.image, 'image'),
         portrait: resolveCharacterAssetUrl(

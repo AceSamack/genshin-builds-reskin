@@ -28,7 +28,8 @@ src/content/<element>/<rarity>/<character>/metadata.json
   `claymore`, `polearm`, `bow`, and `catalyst`. This must match one of the
   files in `src/data/weapons`.
 - `last_updated`: Genshin version string shown in the page header and used by
-  the home page `Recently updated` filter.
+  the home page `Recently updated` filter. Also used to block access to a
+  character's guide if its value is "WIP"
 - `version_released`: Character release version from the official HoYoWiki,
   used by the home page `Release date - Newest` sort. Use the changelog format
   for Luna versions, such as `6.6 / Luna VII`.
